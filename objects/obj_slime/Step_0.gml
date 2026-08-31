@@ -66,6 +66,13 @@ switch (enemy_state)
 	}
 	case 2:
 	{
+        // Porta o prototipo web para a exploracao atual:
+        // quando o slime alcanca o jogador, abre a batalha em GML.
+        if (!instance_exists(obj_battle_controller))
+        {
+            batalha_iniciar(id);
+        }
+
 		break;
 	}	
 }	
