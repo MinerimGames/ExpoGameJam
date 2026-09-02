@@ -9,7 +9,10 @@
   "managed":true,
   "name":"obj_newton_npc",
   "overriddenProperties":[],
-  "parent":{"name":"Objects","path":"folders/Objects.yy",},
+  "parent":{
+    "name":"Objects",
+    "path":"folders/Objects.yy",
+  },
   "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -28,7 +31,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{"name":"spr_newton_npc","path":"sprites/spr_newton_npc/spr_newton_npc.yy",},
+  "spriteId":{
+    "name":"spr_newton_npc",
+    "path":"sprites/spr_newton_npc/spr_newton_npc.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }
