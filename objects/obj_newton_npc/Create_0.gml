@@ -12,21 +12,20 @@ tutorial_completed = false;
 
 // A historia fica em paginas curtas para caber bem no balao.
 dialogue_intro = [
-    "Finalmente! Eu estava esperando voce. A linha do tempo sofreu uma ruptura, e nao foi uma ruptura comum.",
-    "Incursoes multiversais comecaram a acontecer: universos diferentes estao se cruzando e tentando ocupar o mesmo lugar ao mesmo tempo.",
-    "Passado, futuro e realidades alternativas estao se misturando. Cada incursao distorce as regras deste lugar e torna tudo instavel.",
-    "A matematica ainda funciona como uma ancora. Numeros, distancias e padroes conseguem estabilizar essas distorcoes.",
-    "Quando uma incursao virar combate, cada acao exigira um calculo. Se voce acertar a conta, sua acao acontece. Se errar, a anomalia reage.",
-    "ATAQUE causa dano. CURA recupera vida. DEFESA reduz o golpe recebido. ESQUIVA pode evitar completamente um ataque.",
-    "Antes de enviar voce para uma linha do tempo quebrada, faremos um treinamento. Eu serei seu oponente e vou guiar cada passo.",
-    "Use as quatro acoes, resolva as contas e observe como o combate funciona. Depois disso, voce estara pronto. Vamos comecar!"
+	"Finalmente! Eu estava esperando voce. A linha do tempo sofreu uma ruptura, e nao foi uma ruptura comum.",
+	"Incursoes multiversais comecaram a acontecer: universos diferentes estao se cruzando e tentando ocupar o mesmo lugar ao mesmo tempo.",
+	"Passado, futuro e realidades alternativas estao se misturando. Cada incursao distorce as regras deste lugar e torna tudo instavel.",
+	"A matematica ainda funciona como uma ancora. Numeros, distancias e padroes conseguem estabilizar essas distorcoes.",
+	"Quando uma incursao virar combate, cada acao exigira um calculo. Se voce acertar a conta, sua acao acontece. Se errar, a anomalia reage.",
+	"ATAQUE causa dano. CURA recupera vida. DEFESA reduz o golpe recebido. ESQUIVA pode evitar completamente um ataque.",
+	"Antes de enviar voce para uma linha do tempo quebrada, faremos um treinamento. Eu serei seu oponente e vou guiar cada passo.",
+	"Use as quatro acoes, resolva as contas e observe como o combate funciona. Depois disso, voce estara pronto. Vamos comecar!"
 ];
 
 dialogue_post = [
     "Excelente! Voce entendeu o principio: primeiro raciocine, depois aja. Nas incursoes reais, os calculos ficarao cada vez mais dificeis.",
     "Agora siga em frente e feche os pontos de incursao. Se os universos continuarem se cruzando, a linha do tempo pode colapsar de vez."
 ];
-
 dialogue_reminder = [
     "Lembre-se: as incursoes distorcem a realidade, e a matematica e a sua ancora. Resolva os calculos para estabilizar suas acoes."
 ];
