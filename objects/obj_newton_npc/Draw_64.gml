@@ -54,8 +54,9 @@ var _pages = npc_current_dialogue();
 var _text = _pages[clamp(dialogue_page, 0, array_length(_pages) - 1)];
 
 // As linhas sao quebradas manualmente por largura aproximada para manter a leitura.
+// Quantidade máxima aproximada de caracteres em cada linha
 var _wrapped = string(_text);
-var _max_chars = 74;
+var _max_chars = 60;
 var _words = string_split(_wrapped, " ");
 var _line = "";
 var _output = "";
@@ -78,7 +79,7 @@ _output += _line;
 npc_draw_text(205, 408, _output, 0.88, _purple);
 
 draw_set_halign(fa_right);
-npc_draw_text(850, 489, "E / ESPACO  >", 0.72, _purple);
+npc_draw_text(850, 489, "E / ESPACO  >>", 0.72, _purple);
 draw_set_halign(fa_left);
 
 draw_set_alpha(1);

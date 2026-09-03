@@ -63,7 +63,7 @@ right = noone;
 
 velh = 0;
 velv = 0;
-vel = 3;
+vel = 2;
 
 dir = 3;
 

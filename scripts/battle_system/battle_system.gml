@@ -87,20 +87,28 @@ function batalha_iniciar(_inimigo = noone, _tutorial = false)
     }
 
     var _controlador = instance_create_depth(0, 0, -1000, obj_battle_controller);
-    _controlador.enemy_source = _inimigo;
-    _controlador.tutorial_mode = _tutorial;
+_controlador.enemy_source = _inimigo;
+
+// tutorial_mode poderá ser desativado depois dos quatro passos.
+_controlador.tutorial_mode = _tutorial;
+
+// Esta variável nunca muda durante a batalha.
+_controlador.battle_started_as_tutorial = _tutorial;
+
+_controlador.guided_tutorial_completed = false;
 
     if (_tutorial)
     {
-        _controlador.player_name = "Isleide";
+        _controlador.player_name = "Isleide Wilson";
         _controlador.enemy_name = "Isleide Newton";
         _controlador.player_hp_max = 100;
-        _controlador.player_hp = 70;
-        _controlador.enemy_hp_max = 200;
-        _controlador.enemy_hp = 200;
+        _controlador.player_hp = 100;
+        _controlador.enemy_hp_max = 100;
+        _controlador.enemy_hp = 100;
         _controlador.tutorial_step = 0;
         _controlador.math_phase = 1;
-        _controlador.battle_message = "Tutorial: comece usando ATAQUE.";
+		_controlador.battle_message =
+    "Siga as instruções do painel superior.";
     }
 
     return _controlador;
