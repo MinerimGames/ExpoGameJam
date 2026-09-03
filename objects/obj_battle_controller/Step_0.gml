@@ -49,7 +49,16 @@ switch (battle_screen)
 
         keyboard_string = answer_text;
 
-        var _ok_mouse = _click && inside_ref_rect(_mx, _my, 670, 333, 120, 55);
+        var _ok_mouse =
+    _click
+    && inside_ref_rect(
+        _mx,
+        _my,
+        582,
+        322,
+        136,
+        66
+    );
         if (_ok_mouse || keyboard_check_pressed(vk_enter))
         {
             verify_answer();

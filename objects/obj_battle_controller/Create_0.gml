@@ -21,8 +21,16 @@ enemy_source = noone;
 player_name = "Isleide";
 enemy_name = "Inimigo";
 
-// Modo de tutorial iniciado pelo Isleide Newton.
+// Indica se a fase guiada está acontecendo neste momento.
 tutorial_mode = false;
+
+// Permanece verdadeiro mesmo depois que a fase guiada termina.
+// Isso permite que o jogo reconheça a batalha contra Newton.
+battle_started_as_tutorial = false;
+
+// Indica que os quatro passos obrigatórios já foram concluídos.
+guided_tutorial_completed = false;
+
 tutorial_step = 0;
 tutorial_actions = ["attack", "heal", "defense", "dodge"];
 tutorial_labels = ["ATAQUE", "CURA", "DEFESA", "ESQUIVA"];
@@ -124,8 +132,51 @@ tutorial_expected_label = function()
 tutorial_hint = function()
 {
     if (!tutorial_mode) return "";
-    if (tutorial_step >= 4) return "Treino concluido.";
+    if (tutorial_step >= 4) return "Treino concluído.";
     return "PASSO " + string(tutorial_step + 1) + "/4 - Use " + tutorial_expected_label() + ".";
+};
+
+wrap_battle_message = function(_text, _max_chars = 44)
+{
+    var _words = string_split(string(_text), " ");
+    var _line = "";
+    var _output = "";
+
+    for (var i = 0; i < array_length(_words); i++)
+    {
+        var _word = _words[i];
+
+        var _test = (_line == "")
+            ? _word
+            : _line + " " + _word;
+
+        if (string_length(_test) > _max_chars)
+        {
+            if (_output != "")
+            {
+                _output += chr(10);
+            }
+
+            _output += _line;
+            _line = _word;
+        }
+        else
+        {
+            _line = _test;
+        }
+    }
+
+    if (_line != "")
+    {
+        if (_output != "")
+        {
+            _output += chr(10);
+        }
+
+        _output += _line;
+    }
+
+    return _output;
 };
 
 limit_hp = function()
@@ -145,7 +196,7 @@ finish_check = function()
 {
     if (player_hp <= 0)
     {
-        battle_message = "Voce perdeu.";
+        battle_message = "Você perdeu.";
         pending_action = "";
         battle_screen = "defeat";
         keyboard_string = "";
@@ -154,7 +205,7 @@ finish_check = function()
 
     if (enemy_hp <= 0)
     {
-        battle_message = "Voce venceu.";
+        battle_message = "Você venceu.";
         pending_action = "";
         battle_screen = "victory";
         keyboard_string = "";
@@ -172,13 +223,13 @@ enemy_attack = function(_defending = false, _dodging = false)
     if (!tutorial_mode && random(1) < 0.15)
     {
         _damage *= 2;
-        _message = "O inimigo acertou critico de " + string(_damage) + " de dano.";
+        _message = "O inimigo acertou crítico de " + string(_damage) + " de dano.";
     }
 
     if (_defending)
     {
         _damage = floor(_damage / 2);
-        _message = "Voce defendeu e recebeu " + string(_damage) + " de dano.";
+        _message = "Dano reduzido, recebeu " + string(_damage) + " de dano.";
     }
 
     if (_dodging)
@@ -186,11 +237,11 @@ enemy_attack = function(_defending = false, _dodging = false)
         if (random(1) < 0.5)
         {
             _damage = 0;
-            _message = "Voce esquivou do ataque inimigo.";
+            _message = "Você esquivou do ataque inimigo.";
         }
         else
         {
-            _message = "A esquiva falhou e voce recebeu " + string(_damage) + " de dano.";
+            _message = "A esquiva falhou e você recebeu " + string(_damage) + " de dano.";
         }
     }
 
@@ -199,7 +250,7 @@ enemy_attack = function(_defending = false, _dodging = false)
 
     if (player_hp <= 0)
     {
-        return _message + " Voce perdeu.";
+        return _message + " Você perdeu.";
     }
 
     return _message;
@@ -208,12 +259,12 @@ enemy_attack = function(_defending = false, _dodging = false)
 execute_attack = function()
 {
     var _damage = batalha_numero_aleatorio(12, 22);
-    var _message = "Voce atacou e deu " + string(_damage) + " de dano.";
+    var _message = "Você atacou e deu " + string(_damage) + " de dano.";
 
     if (random(1) < 0.20)
     {
         _damage *= 2;
-        _message = "Voce acertou critico de " + string(_damage) + " de dano.";
+        _message = "Você acertou crítico de " + string(_damage) + " de dano.";
     }
 
     enemy_hp -= _damage;
@@ -221,7 +272,7 @@ execute_attack = function()
 
     if (enemy_hp <= 0)
     {
-        battle_message = _message + " Voce venceu.";
+        battle_message = _message + " Você venceu.";
         finish_check();
         return;
     }
@@ -232,7 +283,7 @@ execute_attack = function()
 
 execute_defense = function()
 {
-    battle_message = "Voce defendeu. " + enemy_attack(true, false);
+    battle_message = "Você defendeu. " + enemy_attack(true, false);
     finish_check();
 };
 
@@ -243,13 +294,13 @@ execute_heal = function()
     limit_hp();
 
     var _healed = player_hp - _before;
-    battle_message = "Voce curou " + string(_healed) + " de vida. " + enemy_attack(false, false);
+    battle_message = "Você curou " + string(_healed) + " de vida. " + enemy_attack(false, false);
     finish_check();
 };
 
 execute_dodge = function()
 {
-    battle_message = "Voce tentou esquivar. " + enemy_attack(false, true);
+    battle_message = "Você tentou esquivar. " + enemy_attack(false, true);
     finish_check();
 };
 
@@ -266,23 +317,29 @@ execute_pending_action = function()
         case "dodge": execute_dodge(); break;
     }
 
-    // No tutorial, cada acao correta ensina uma parte do sistema.
-    if (tutorial_mode && battle_screen != "defeat")
-    {
-        tutorial_step += 1;
+// Durante a fase guiada, cada ação correta avança uma etapa.
+if (tutorial_mode && battle_screen != "defeat")
+{
+    tutorial_step += 1;
 
-        if (tutorial_step >= array_length(tutorial_actions))
-        {
-            battle_screen = "victory";
-            battle_message = "Treino concluido! Voce executou as quatro acoes e estabilizou os calculos.";
-            keyboard_string = "";
-            answer_text = "";
-        }
-        else
-        {
-            battle_message += " Proximo passo: " + tutorial_expected_label() + ".";
-        }
+    // Depois das quatro ações, libera a batalha normal.
+    if (tutorial_step >= array_length(tutorial_actions))
+    {
+        tutorial_mode = false;
+        guided_tutorial_completed = true;
+
+        battle_screen = "actions";
+        pending_action = "";
+        keyboard_string = "";
+        answer_text = "";
+
+        battle_message =
+            "Treinamento concluído! Agora use livremente "
+            + "as quatro ações e derrote Newton.";
+
+        show_result("LIBERADO!");
     }
+}
 };
 
 request_action = function(_action)
@@ -310,7 +367,7 @@ apply_wrong_answer = function()
     answer_text = "";
     keyboard_string = "";
     show_result("ERROU!");
-    battle_message = "Voce errou a conta. " + _message;
+    battle_message = "Você errou a conta. " + _message;
     finish_check();
 };
 
@@ -345,24 +402,68 @@ verify_answer = function()
 
 restart_battle = function()
 {
-    player_hp = tutorial_mode ? 70 : player_hp_max;
-    enemy_hp = tutorial_mode ? 200 : enemy_hp_max;
     player_hp_max = 100;
-    enemy_hp_max = tutorial_mode ? 200 : 100;
+
+    // Batalha que começou como tutorial de Newton.
+    if (battle_started_as_tutorial)
+    {
+        enemy_hp_max = 100;
+
+        player_hp = player_hp_max;
+        enemy_hp = enemy_hp_max;
+
+        // Se a parte guiada já havia sido concluída,
+        // reinicia diretamente na batalha livre.
+        if (guided_tutorial_completed)
+        {
+            tutorial_mode = false;
+            tutorial_step = array_length(tutorial_actions);
+
+            // As quatro primeiras contas já foram superadas.
+            math_phase = 5;
+
+            battle_message =
+                "Batalha reiniciada. Use livremente "
+                + "as quatro ações para derrotar Newton.";
+        }
+        else
+        {
+            // Se perdeu durante o tutorial,
+            // reinicia os quatro passos obrigatórios.
+            tutorial_mode = true;
+            tutorial_step = 0;
+            math_phase = 1;
+
+            battle_message =
+                "Siga as instruções do painel superior.";
+        }
+    }
+    else
+    {
+        // Reinício de uma batalha comum.
+        tutorial_mode = false;
+        tutorial_step = 0;
+        math_phase = 1;
+
+        player_hp = player_hp_max;
+        enemy_hp = enemy_hp_max;
+
+        battle_message = "Batalha reiniciada.";
+    }
+
     pending_action = "";
-    math_phase = 1;
-    tutorial_step = 0;
     answer_text = "";
     keyboard_string = "";
+
     result_visible = false;
     result_timer = 0;
+
     battle_screen = "actions";
-    battle_message = tutorial_mode ? "Tutorial: comece usando ATAQUE." : "Batalha reiniciada.";
 };
 
 leave_after_victory = function()
 {
-    if (tutorial_mode)
+    if (battle_started_as_tutorial)
     {
         if (instance_exists(enemy_source))
         {

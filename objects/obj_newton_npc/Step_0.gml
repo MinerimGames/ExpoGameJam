@@ -35,14 +35,29 @@ if (dialogue_active)
             dialogue_page = 0;
 
             if (dialogue_mode == "intro" && !tutorial_started)
-            {
-                tutorial_started = true;
-                batalha_iniciar(id, true);
-            }
-            else
-            {
-                npc_lock_player(false);
-            }
+{
+    tutorial_started = true;
+    batalha_iniciar(id, true);
+}
+else
+{
+    npc_lock_player(false);
+
+    // Depois do diálogo pós-batalha, cria o portal.
+    if (dialogue_mode == "post" && !portal_created)
+    {
+        portal_created = true;
+
+        var _portal = instance_create_layer(
+            x + 36,
+            y +12,
+            "enemies",
+            obj_portal
+        );
+
+        _portal.depth = depth + 1;
+    }
+}
         }
     }
 

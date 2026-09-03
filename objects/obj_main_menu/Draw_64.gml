@@ -73,9 +73,22 @@ draw_set_color(color_white);
 
 draw_text(
     _gui_width * 0.5,
-    108,
+    96,
     "A LINHA DO TEMPO PRECISA DE VOCÊ"
 );
+
+// Identificação da versão
+draw_set_font(fnt_ui);
+draw_set_color(color_white);
+draw_set_halign(fa_center);
+draw_set_valign(fa_middle);
+
+draw_text(
+    _gui_width * 0.5,
+    116,
+    "(DEMO)"
+);
+
 
 // ==================================================
 // BOTÕES

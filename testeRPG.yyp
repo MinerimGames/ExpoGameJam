@@ -39,9 +39,12 @@
     {"id":{"name":"fnt_ui","path":"fonts/fnt_ui/fnt_ui.yy",},},
     {"id":{"name":"obj_battle_controller","path":"objects/obj_battle_controller/obj_battle_controller.yy",},},
     {"id":{"name":"obj_colisor","path":"objects/obj_colisor/obj_colisor.yy",},},
+    {"id":{"name":"obj_demo_end","path":"objects/obj_demo_end/obj_demo_end.yy",},},
     {"id":{"name":"obj_main_menu","path":"objects/obj_main_menu/obj_main_menu.yy",},},
     {"id":{"name":"obj_newton_npc","path":"objects/obj_newton_npc/obj_newton_npc.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
+    {"id":{"name":"obj_portal","path":"objects/obj_portal/obj_portal.yy",},},
+    {"id":{"name":"rm_demo_end","path":"rooms/rm_demo_end/rm_demo_end.yy",},},
     {"id":{"name":"rm_menu","path":"rooms/rm_menu/rm_menu.yy",},},
     {"id":{"name":"rm_tutorial","path":"rooms/rm_tutorial/rm_tutorial.yy",},},
     {"id":{"name":"battle_system","path":"scripts/battle_system/battle_system.yy",},},
@@ -57,6 +60,7 @@
     {"id":{"name":"spr_player_walk_back","path":"sprites/spr_player_walk_back/spr_player_walk_back.yy",},},
     {"id":{"name":"spr_player_walk_front","path":"sprites/spr_player_walk_front/spr_player_walk_front.yy",},},
     {"id":{"name":"spr_player_walk_side","path":"sprites/spr_player_walk_side/spr_player_walk_side.yy",},},
+    {"id":{"name":"spr_portal","path":"sprites/spr_portal/spr_portal.yy",},},
     {"id":{"name":"spr_tileset","path":"sprites/spr_tileset/spr_tileset.yy",},},
     {"id":{"name":"tl_grasslands","path":"tilesets/tl_grasslands/tl_grasslands.yy",},},
   ],
@@ -65,6 +69,7 @@
   "RoomOrderNodes":[
     {"roomId":{"name":"rm_menu","path":"rooms/rm_menu/rm_menu.yy",},},
     {"roomId":{"name":"rm_tutorial","path":"rooms/rm_tutorial/rm_tutorial.yy",},},
+    {"roomId":{"name":"rm_demo_end","path":"rooms/rm_demo_end/rm_demo_end.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
