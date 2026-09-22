@@ -9,6 +9,7 @@ dialogue_page = 0;
 dialogue_mode = "intro";
 tutorial_started = false;
 tutorial_completed = false;
+portal_created = false;
 
 // A historia fica em paginas curtas para caber bem no balao.
 dialogue_intro = [
@@ -24,7 +25,8 @@ dialogue_intro = [
 
 dialogue_post = [
     "Excelente! Voce entendeu o principio: primeiro raciocine, depois aja. Nas incursoes reais, os calculos ficarao cada vez mais dificeis.",
-    "Agora siga em frente e feche os pontos de incursao. Se os universos continuarem se cruzando, a linha do tempo pode colapsar de vez."
+    "Agora siga em frente e feche os pontos de incursao. Se os universos continuarem se cruzando, a linha do tempo pode colapsar de vez.",
+    "Estabilizei um portal atrás de mim. Atravesse-o quando estiver pronto para entrar na primeira realidade fragmentada."
 ];
 
 dialogue_reminder = [

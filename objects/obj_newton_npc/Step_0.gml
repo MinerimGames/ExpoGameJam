@@ -42,6 +42,14 @@ if (dialogue_active)
             else
             {
                 npc_lock_player(false);
+
+                // Passagem para a primeira realidade das cavernas.
+                if (dialogue_mode == "post" && !portal_created)
+                {
+                    portal_created = true;
+                    var _portal = instance_create_layer(x + 36, y + 12, "enemies", obj_portal);
+                    _portal.depth = depth + 1;
+                }
             }
         }
     }

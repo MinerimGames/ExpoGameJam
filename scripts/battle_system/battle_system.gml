@@ -103,5 +103,36 @@ function batalha_iniciar(_inimigo = noone, _tutorial = false)
         _controlador.battle_message = "Tutorial: comece usando ATAQUE.";
     }
 
+    else if (instance_exists(_inimigo))
+    {
+        _controlador.player_name = "Isleide Wilson";
+
+        if (variable_instance_exists(_inimigo, "battle_name"))
+            _controlador.enemy_name = _inimigo.battle_name;
+
+        if (variable_instance_exists(_inimigo, "battle_hp"))
+        {
+            _controlador.enemy_hp_max = _inimigo.battle_hp;
+            _controlador.enemy_hp = _inimigo.battle_hp;
+        }
+
+        if (variable_instance_exists(_inimigo, "battle_math_phase"))
+            _controlador.math_phase = _inimigo.battle_math_phase;
+
+        if (variable_instance_exists(_inimigo, "battle_math_phase_max"))
+            _controlador.math_phase_max = _inimigo.battle_math_phase_max;
+
+        if (variable_instance_exists(_inimigo, "battle_sprite"))
+            _controlador.enemy_battle_sprite = _inimigo.battle_sprite;
+
+        if (variable_instance_exists(_inimigo, "battle_blend"))
+            _controlador.enemy_battle_blend = _inimigo.battle_blend;
+
+        if (variable_instance_exists(_inimigo, "battle_scale"))
+            _controlador.enemy_battle_scale = _inimigo.battle_scale;
+
+        _controlador.battle_message = "Derrote a criatura e estabilize a incursão.";
+    }
+
     return _controlador;
 }

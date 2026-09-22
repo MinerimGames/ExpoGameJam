@@ -46,9 +46,19 @@ if (sprite_exists(spr_battle_isleide))
     draw_sprite_ext(spr_battle_isleide, 0, rx(300), ry(415), 0.40 * _sx, 0.40 * _sx, 0, c_white, 1);
 }
 
-if (sprite_exists(spr_battle_newton))
+if (sprite_exists(enemy_battle_sprite))
 {
-    draw_sprite_ext(spr_battle_newton, 0, rx(705), ry(305), 0.40 * _sx, 0.40 * _sx, 0, c_white, 1);
+    draw_sprite_ext(
+        enemy_battle_sprite,
+        0,
+        rx(705),
+        ry(305),
+        enemy_battle_scale * _sx,
+        enemy_battle_scale * _sx,
+        0,
+        enemy_battle_blend,
+        1
+    );
 }
 
 // Guia visual do treinamento.

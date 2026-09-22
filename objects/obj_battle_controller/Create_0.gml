@@ -8,6 +8,7 @@ enemy_hp_max = 100;
 
 pending_action = "";
 math_phase = 1;
+math_phase_max = 16;
 challenge = undefined;
 answer_text = "";
 
@@ -20,6 +21,9 @@ result_timer = 0;
 enemy_source = noone;
 player_name = "Isleide";
 enemy_name = "Inimigo";
+enemy_battle_sprite = spr_battle_newton;
+enemy_battle_blend = c_white;
+enemy_battle_scale = 0.40;
 
 // Modo de tutorial iniciado pelo Isleide Newton.
 tutorial_mode = false;
@@ -330,7 +334,7 @@ verify_answer = function()
         battle_screen = "actions";
         show_result("ACERTOU!");
 
-        if (math_phase < 16)
+        if (math_phase < math_phase_max)
         {
             math_phase += 1;
         }
@@ -348,7 +352,7 @@ restart_battle = function()
     player_hp = tutorial_mode ? 70 : player_hp_max;
     enemy_hp = tutorial_mode ? 200 : enemy_hp_max;
     player_hp_max = 100;
-    enemy_hp_max = tutorial_mode ? 200 : 100;
+    enemy_hp_max = tutorial_mode ? 200 : enemy_hp_max;
     pending_action = "";
     math_phase = 1;
     tutorial_step = 0;
