@@ -38,3 +38,5 @@ if (_player_inside && !portal_activated)
 
     room_goto(portal_destination);
 }
+    room_goto(rm_demo_end);
+}

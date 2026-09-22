@@ -81,6 +81,7 @@ right = noone;
 velh = 0;
 velv = 0;
 vel = (room == rm_cavernas || room == rm_cavernas_2) ? 2 : 3;
+vel = 2;
 
 dir = 3;
 

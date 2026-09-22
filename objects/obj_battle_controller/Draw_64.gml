@@ -2,6 +2,11 @@
 
 update_ui_transform();
 
+// Garante que toda a batalha use a mesma fonte da interface
+draw_set_font(fnt_ui);
+draw_set_halign(fa_left);
+draw_set_valign(fa_top);
+
 var _sx = ui_scale;
 var _ox = ui_offset_x;
 var _oy = ui_offset_y;
@@ -21,7 +26,7 @@ draw_rectangle(_ox, _oy, _ox + 960 * _sx, _oy + 540 * _sx, true);
 // Status inimigo.
 draw_ui_box(0, 0, 260, 112, col_white, col_yellow, 5);
 draw_ui_text(12, 10, enemy_name, 1.05, col_purple);
-draw_ui_text(12, 31, "FASE MAT. " + string(math_phase), 0.8, col_purple);
+draw_ui_text(12, 31, "NÍVEL MAT. " + string(math_phase), 0.8, col_purple);
 
 // Barra inimigo.
 draw_ui_box(12, 55, 236, 22, col_purple, col_yellow, 3);
@@ -33,7 +38,7 @@ draw_ui_text(12, 84, "HP: " + string(enemy_hp) + "/" + string(enemy_hp_max), 0.7
 // Status jogador.
 draw_ui_box(0, 428, 260, 112, col_white, col_yellow, 5);
 draw_ui_text(12, 438, player_name, 1.05, col_purple);
-draw_ui_text(12, 459, "NIVEL 1", 0.8, col_purple);
+draw_ui_text(12, 459, "NÍVEL 1", 0.8, col_purple);
 draw_ui_box(12, 483, 236, 22, col_purple, col_yellow, 3);
 var _player_ratio = player_hp / player_hp_max;
 draw_set_color(col_green);
@@ -67,7 +72,7 @@ if (tutorial_mode && battle_screen != "victory" && battle_screen != "defeat")
     draw_ui_box(285, 16, 360, 72, col_white, col_yellow, 5);
     draw_set_halign(fa_center);
     draw_set_valign(fa_middle);
-    draw_ui_text(465, 40, "TREINO DE INCURSAO", 0.92, col_purple);
+    draw_ui_text(465, 40, "TREINO DE INCURSÃO", 0.92, col_purple);
     draw_ui_text(465, 66, tutorial_hint(), 0.78, col_purple);
     draw_set_halign(fa_left);
     draw_set_valign(fa_top);
@@ -77,7 +82,13 @@ if (tutorial_mode && battle_screen != "victory" && battle_screen != "defeat")
 draw_set_alpha(0.88);
 draw_ui_box(275, 420, 355, 105, col_white, col_purple, 4);
 draw_set_alpha(1);
-draw_ui_text(288, 434, battle_message, 0.70, col_purple);
+draw_ui_text(
+    288,
+    438,
+    wrap_battle_message(battle_message, 40),
+    0.70,
+    col_purple
+);
 
 // Menu 2x2.
 draw_ui_box(650, 315, 310, 225, col_yellow, col_yellow, 1);
@@ -110,11 +121,40 @@ if (battle_screen == "challenge")
         col_purple
     );
 
-    draw_set_halign(fa_left);
-    draw_set_valign(fa_top);
-    draw_ui_box(242, 322, 418, 66, col_white, col_purple, 4);
-    draw_ui_text(260, 342, (answer_text == "" ? "RESPOSTA" : answer_text), 1.0, col_purple);
-    draw_ui_button(670, 333, 120, 55, "OK");
+// Campo de resposta
+draw_ui_box(
+    242,
+    322,
+    330,
+    66,
+    col_white,
+    col_purple,
+    4
+);
+
+// Centraliza a resposta dentro do campo
+draw_set_halign(fa_center);
+draw_set_valign(fa_middle);
+
+draw_ui_text(
+    407,
+    355,
+    answer_text == "" ? "RESPOSTA" : answer_text,
+    1.0,
+    col_purple
+);
+
+// Botão alinhado ao campo de resposta
+draw_ui_button(
+    582,
+    322,
+    136,
+    66,
+    "OK"
+);
+
+draw_set_halign(fa_left);
+draw_set_valign(fa_top);
 }
 
 // Popup curto ACERTOU/ERROU (900ms como no JS).
@@ -148,22 +188,42 @@ if (battle_screen == "victory" || battle_screen == "defeat")
 
     if (battle_screen == "victory")
     {
-        if (tutorial_mode)
-        {
-            draw_ui_text(480, 210, "TREINO CONCLUIDO!", 1.35, col_purple);
-            draw_ui_text(480, 270, "Voce aprendeu as quatro acoes do combate.", 0.78, col_purple);
-            draw_ui_button(350, 335, 260, 60, "FALAR COM NEWTON");
-        }
+       if (battle_started_as_tutorial)
+{
+    draw_ui_text(
+        480,
+        210,
+        "VOCÊ VENCEU!",
+        1.45,
+        col_purple
+    );
+
+    draw_ui_text(
+        480,
+        270,
+        "Você concluiu o treinamento e derrotou Newton.",
+        0.78,
+        col_purple
+    );
+
+    draw_ui_button(
+        350,
+        335,
+        260,
+        60,
+        "FALAR COM NEWTON"
+    );
+}
         else
         {
-            draw_ui_text(480, 210, "VOCE VENCEU!", 1.45, col_purple);
+            draw_ui_text(480, 210, "VOCÊ VENCEU!", 1.45, col_purple);
             draw_ui_text(480, 270, "A batalha acabou por enquanto.", 0.78, col_purple);
             draw_ui_button(350, 335, 260, 60, "RETORNAR");
         }
     }
     else
     {
-        draw_ui_text(480, 210, "VOCE PERDEU!", 1.45, col_purple);
+        draw_ui_text(480, 210, "VOCÊ PERDEU!", 1.45, col_purple);
         draw_ui_text(480, 270, "Tenta de novo que agora vai.", 0.78, col_purple);
         draw_ui_button(350, 335, 260, 60, "TENTAR DE NOVO");
     }
