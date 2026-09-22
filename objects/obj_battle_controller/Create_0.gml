@@ -8,6 +8,7 @@ enemy_hp_max = 100;
 
 pending_action = "";
 math_phase = 1;
+math_phase_max = 16;
 challenge = undefined;
 answer_text = "";
 
@@ -20,6 +21,9 @@ result_timer = 0;
 enemy_source = noone;
 player_name = "Isleide";
 enemy_name = "Inimigo";
+enemy_battle_sprite = spr_battle_newton;
+enemy_battle_blend = c_white;
+enemy_battle_scale = 0.40;
 
 // Indica se a fase guiada está acontecendo neste momento.
 tutorial_mode = false;
@@ -387,7 +391,7 @@ verify_answer = function()
         battle_screen = "actions";
         show_result("ACERTOU!");
 
-        if (math_phase < 16)
+        if (math_phase < math_phase_max)
         {
             math_phase += 1;
         }
@@ -403,54 +407,7 @@ verify_answer = function()
 restart_battle = function()
 {
     player_hp_max = 100;
-
-    // Batalha que começou como tutorial de Newton.
-    if (battle_started_as_tutorial)
-    {
-        enemy_hp_max = 100;
-
-        player_hp = player_hp_max;
-        enemy_hp = enemy_hp_max;
-
-        // Se a parte guiada já havia sido concluída,
-        // reinicia diretamente na batalha livre.
-        if (guided_tutorial_completed)
-        {
-            tutorial_mode = false;
-            tutorial_step = array_length(tutorial_actions);
-
-            // As quatro primeiras contas já foram superadas.
-            math_phase = 5;
-
-            battle_message =
-                "Batalha reiniciada. Use livremente "
-                + "as quatro ações para derrotar Newton.";
-        }
-        else
-        {
-            // Se perdeu durante o tutorial,
-            // reinicia os quatro passos obrigatórios.
-            tutorial_mode = true;
-            tutorial_step = 0;
-            math_phase = 1;
-
-            battle_message =
-                "Siga as instruções do painel superior.";
-        }
-    }
-    else
-    {
-        // Reinício de uma batalha comum.
-        tutorial_mode = false;
-        tutorial_step = 0;
-        math_phase = 1;
-
-        player_hp = player_hp_max;
-        enemy_hp = enemy_hp_max;
-
-        battle_message = "Batalha reiniciada.";
-    }
-
+    enemy_hp_max = tutorial_mode ? 200 : enemy_hp_max;
     pending_action = "";
     answer_text = "";
     keyboard_string = "";

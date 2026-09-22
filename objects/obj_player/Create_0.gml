@@ -1,6 +1,23 @@
 estado_idle = new estado();
 estado_walk = new estado();
 
+// Nos cenários amplos das cavernas, aumenta apenas a representação no mapa.
+// O tutorial e a tela de batalha mantêm suas escalas originais.
+visual_scale = (room == rm_cavernas || room == rm_cavernas_2) ? 2.0 : 1.0;
+facing_sign = 1;
+ground_offset = 7;
+image_alpha = 1;
+
+// Os recortes de cenário (depth 0) não podem cobrir o corpo com pixels
+// esparsos. As colisões continuam delimitando os objetos sólidos.
+if (room == rm_cavernas || room == rm_cavernas_2)
+    depth = -20;
+
+// A escala da instância fica fixa para que a máscara de colisão não cresça
+// dentro de pedras e plantas. O tamanho visual é aplicado apenas no Draw.
+image_xscale = 1;
+image_yscale = 1;
+
 estado_idle.inicia = function(){
 	var _sprite = define_sprite(dir, spr_player_idle_side, spr_player_idle_front, spr_player_idle_back);
 	sprite_index = _sprite;
@@ -44,7 +61,7 @@ estado_walk.roda = function()
     // Espelha o sprite lateral ao andar para a esquerda
     if (velh != 0)
     {
-        image_xscale = sign(velh);
+        facing_sign = sign(velh);
     }
 
     sprite_index = define_sprite(
@@ -63,6 +80,7 @@ right = noone;
 
 velh = 0;
 velv = 0;
+vel = (room == rm_cavernas || room == rm_cavernas_2) ? 2 : 3;
 vel = 2;
 
 dir = 3;
@@ -70,3 +88,7 @@ dir = 3;
 inicia_estado(estado_idle);
 
 movimento_liberado = true;
+
+// Controle das marcas de passos nos mapas das cavernas.
+footstep_timer = 0;
+footstep_side = -1;
