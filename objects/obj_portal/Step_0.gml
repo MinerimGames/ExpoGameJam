@@ -36,5 +36,7 @@ if (_player_inside && !portal_activated)
     _player.velh = 0;
     _player.velv = 0;
 
+    room_goto(portal_destination);
+}
     room_goto(rm_demo_end);
 }
