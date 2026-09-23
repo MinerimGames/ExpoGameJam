@@ -189,7 +189,7 @@ show_result = function(_text)
 {
     result_text = _text;
     result_visible = true;
-    result_timer = max(1, round(room_speed * 0.9));
+    result_timer = max(1, round(game_get_speed(gamespeed_fps) * 0.9));
 };
 
 finish_check = function()

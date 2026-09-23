@@ -44,6 +44,7 @@
     {"id":{"name":"obj_newton_npc","path":"objects/obj_newton_npc/obj_newton_npc.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"obj_portal","path":"objects/obj_portal/obj_portal.yy",},},
+    {"id":{"name":"rm_cavernas","path":"rooms/rm_cavernas/rm_cavernas.yy",},},
     {"id":{"name":"rm_demo_end","path":"rooms/rm_demo_end/rm_demo_end.yy",},},
     {"id":{"name":"rm_menu","path":"rooms/rm_menu/rm_menu.yy",},},
     {"id":{"name":"rm_tutorial","path":"rooms/rm_tutorial/rm_tutorial.yy",},},
@@ -70,6 +71,7 @@
     {"roomId":{"name":"rm_menu","path":"rooms/rm_menu/rm_menu.yy",},},
     {"roomId":{"name":"rm_tutorial","path":"rooms/rm_tutorial/rm_tutorial.yy",},},
     {"roomId":{"name":"rm_demo_end","path":"rooms/rm_demo_end/rm_demo_end.yy",},},
+    {"roomId":{"name":"rm_cavernas","path":"rooms/rm_cavernas/rm_cavernas.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
