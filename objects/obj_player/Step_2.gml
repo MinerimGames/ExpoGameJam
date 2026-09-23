@@ -26,7 +26,7 @@ if (_in_caverns && _walking)
         );
 
         _step.foot_side = footstep_side;
-        footstep_timer = max(8, round(room_speed * 0.16));
+        footstep_timer = max(8, round(game_get_speed(gamespeed_fps) * 0.16));
     }
 }
 else

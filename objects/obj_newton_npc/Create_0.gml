@@ -24,12 +24,9 @@ dialogue_intro = [
 ];
 
 dialogue_post = [
-    "Excelente! Voce entendeu o principio: primeiro raciocine, depois aja. Nas incursoes reais, os calculos ficarao cada vez mais dificeis.",
-    "Agora siga em frente e feche os pontos de incursao. Se os universos continuarem se cruzando, a linha do tempo pode colapsar de vez.",
-    "Estabilizei um portal atrás de mim. Atravesse-o quando estiver pronto para entrar na primeira realidade fragmentada."
     "Excelente! Você entendeu o princípio: primeiro, raciocine; depois, aja. Nas incursões reais, os cálculos ficarão cada vez mais difíceis.",
     "Agora, siga em frente e feche os pontos de incursão. Se os universos continuarem se cruzando, a linha do tempo poderá entrar em colapso de uma vez por todas.",
-    "Estabilizei um portal atrás de mim. Atravesse-o quando estiver pronto para encerrar esta demonstração."
+    "Estabilizei um portal atrás de mim. Atravesse-o quando estiver pronto para entrar na primeira realidade fragmentada."
 ];
 
 dialogue_reminder = [
