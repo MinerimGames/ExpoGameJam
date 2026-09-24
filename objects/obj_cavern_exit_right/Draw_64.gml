@@ -1,5 +1,3 @@
-/// Indica a continuação da área sem interromper a exploração.
-
 var _gw = display_get_gui_width();
 var _scale = min(_gw / 960, display_get_gui_height() / 540);
 

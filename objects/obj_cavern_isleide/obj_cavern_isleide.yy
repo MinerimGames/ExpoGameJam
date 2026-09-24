@@ -9,7 +9,10 @@
   "managed":true,
   "name":"obj_cavern_isleide",
   "overriddenProperties":[],
-  "parent":{"name":"Objects","path":"folders/Objects.yy",},
+  "parent":{
+    "name":"Objects",
+    "path":"folders/Objects.yy",
+  },
   "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -28,7 +31,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{"name":"spr_isleide_cavernas","path":"sprites/spr_isleide_cavernas/spr_isleide_cavernas.yy",},
+  "spriteId":{
+    "name":"spr_isleide_cavernas",
+    "path":"sprites/spr_isleide_cavernas/spr_isleide_cavernas.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

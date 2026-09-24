@@ -1,5 +1,3 @@
-/// Passagem entre as duas áreas das cavernas.
-
 if (!instance_exists(obj_player))
     exit;
 

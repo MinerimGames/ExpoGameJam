@@ -1,8 +1,5 @@
-/// Interação do NPC.
-
 interaction_available = false;
 
-// Durante a batalha, a interface do NPC fica silenciosa.
 if (instance_exists(obj_battle_controller))
 {
     exit;
@@ -44,7 +41,6 @@ if (dialogue_active)
             {
                 npc_lock_player(false);
 
-                // Cria o portal para a primeira realidade.
                 if (dialogue_mode == "post" && !portal_created)
                 {
                     portal_created = true;

@@ -1,8 +1,5 @@
-/// Draw GUI: substitui toda a camada HTML/CSS do prototipo web.
-
 update_ui_transform();
 
-// Garante que toda a batalha use a mesma fonte da interface
 draw_set_font(fnt_ui);
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);
@@ -11,15 +8,11 @@ var _sx = ui_scale;
 var _ox = ui_offset_x;
 var _oy = ui_offset_y;
 
-// Helpers de desenho definidos no Create Event como metodos da instancia.
-
-// Escurece levemente o mundo, mantendo o mapa atual como fundo da arena.
 draw_set_alpha(0.25);
 draw_set_color(c_black);
 draw_rectangle(_ox, _oy, _ox + 960 * _sx, _oy + 540 * _sx, false);
 draw_set_alpha(1);
 
-// Moldura roxa da arena (equivalente ao border do CSS).
 draw_set_color(col_purple);
 draw_rectangle(_ox, _oy, _ox + 960 * _sx, _oy + 540 * _sx, true);
 
@@ -45,7 +38,6 @@ draw_set_color(col_green);
 draw_rectangle(rx(18), ry(489), rx(18 + 224 * _player_ratio), ry(499), false);
 draw_ui_text(12, 512, "HP: " + string(player_hp) + "/" + string(player_hp_max), 0.72, col_purple);
 
-// Personagens da cena de batalha: Isleide normal x Isleide Newton.
 if (sprite_exists(spr_battle_isleide))
 {
     draw_sprite_ext(spr_battle_isleide, 0, rx(300), ry(415), 0.40 * _sx, 0.40 * _sx, 0, c_white, 1);
@@ -66,7 +58,6 @@ if (sprite_exists(enemy_battle_sprite))
     );
 }
 
-// Guia visual do treinamento.
 if (tutorial_mode && battle_screen != "victory" && battle_screen != "defeat")
 {
     draw_ui_box(285, 16, 360, 72, col_white, col_yellow, 5);
@@ -132,7 +123,6 @@ draw_ui_box(
     4
 );
 
-// Centraliza a resposta dentro do campo
 draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
 
@@ -144,7 +134,6 @@ draw_ui_text(
     col_purple
 );
 
-// Botão alinhado ao campo de resposta
 draw_ui_button(
     582,
     322,
@@ -157,7 +146,6 @@ draw_set_halign(fa_left);
 draw_set_valign(fa_top);
 }
 
-// Popup curto ACERTOU/ERROU (900ms como no JS).
 if (result_visible)
 {
     draw_set_alpha(0.12);
@@ -216,9 +204,46 @@ if (battle_screen == "victory" || battle_screen == "defeat")
 }
         else
         {
-            draw_ui_text(480, 210, "VOCÊ VENCEU!", 1.45, col_purple);
-            draw_ui_text(480, 270, "A batalha acabou por enquanto.", 0.78, col_purple);
-            draw_ui_button(350, 335, 260, 60, "RETORNAR");
+            var _encerra_demo = false;
+
+if (instance_exists(enemy_source))
+{
+    _encerra_demo =
+        (enemy_source.object_index == obj_cavern_isleide);
+}
+
+draw_ui_text(
+    480, 210,
+    "VOCÊ VENCEU!",
+    1.45, col_purple
+);
+
+if (_encerra_demo)
+{
+    draw_ui_text(
+        480, 270,
+        "Você derrotou o Isleide das Cavernas!",
+        0.78, col_purple
+    );
+
+    draw_ui_button(
+        350, 335, 260, 60,
+        "FINALIZAR DEMO"
+    );
+}
+else
+{
+    draw_ui_text(
+        480, 270,
+        "A batalha acabou por enquanto.",
+        0.78, col_purple
+    );
+
+    draw_ui_button(
+        350, 335, 260, 60,
+        "RETORNAR"
+    );
+}
         }
     }
     else

@@ -17,7 +17,7 @@ switch (battle_screen)
 {
     case "actions":
     {
-        // Mouse e atalhos 1..4 substituem os botoes do HTML.
+        
         if ((_click && inside_ref_rect(_mx, _my, 660, 325, 140, 90)) || keyboard_check_pressed(ord("1")))
         {
             request_action("attack");
@@ -39,7 +39,7 @@ switch (battle_screen)
 
     case "challenge":
     {
-        // O input <input type="number"> do HTML vira keyboard_string.
+      
         answer_text = string_digits(keyboard_string);
 
         if (string_length(answer_text) > 5)

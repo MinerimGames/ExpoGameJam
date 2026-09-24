@@ -32,8 +32,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_newton_npc",
-    "path":"sprites/spr_newton_npc/spr_newton_npc.yy",
+    "name":"spr_battle_newton",
+    "path":"sprites/spr_battle_newton/spr_battle_newton.yy",
   },
   "spriteMaskId":null,
   "visible":true,
