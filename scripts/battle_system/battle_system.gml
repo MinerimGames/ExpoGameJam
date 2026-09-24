@@ -1,6 +1,3 @@
-/// Sistema de batalha portado do prototipo HTML/JS para GML.
-/// Mantem as regras de battle.js e challenge.js, mas usa eventos do GameMaker.
-
 function batalha_numero_aleatorio(_minimo, _maximo)
 {
     return irandom_range(_minimo, _maximo);
@@ -15,7 +12,6 @@ function batalha_gerar_desafio(_fase)
     var _resposta = 0;
     var _operacao = "";
 
-    // Fases 1 a 3: soma de 1 algarismo.
     if (_fase >= 1 && _fase <= 3)
     {
         _x = irandom_range(1, 9);
@@ -23,7 +19,6 @@ function batalha_gerar_desafio(_fase)
         _resposta = _x + _y;
         _operacao = "+";
     }
-    // Fases 4 a 6: preserva exatamente os intervalos usados no JS.
     else if (_fase >= 4 && _fase <= 6)
     {
         _x = irandom_range(10, 48);
@@ -31,7 +26,6 @@ function batalha_gerar_desafio(_fase)
         _resposta = _x + _y;
         _operacao = "+";
     }
-    // Fases 7 a 9: subtracao de 1 algarismo, garantindo x > y.
     else if (_fase >= 7 && _fase <= 9)
     {
         _x = irandom_range(2, 9);
@@ -39,7 +33,6 @@ function batalha_gerar_desafio(_fase)
         _resposta = _x - _y;
         _operacao = "-";
     }
-    // Fases 10 a 12: preserva o comportamento do JS, inclusive x = y quando x = 10.
     else if (_fase >= 10 && _fase <= 12)
     {
         _x = irandom_range(10, 48);
@@ -47,7 +40,6 @@ function batalha_gerar_desafio(_fase)
         _resposta = _x - _y;
         _operacao = "-";
     }
-    // Fases 13 e 14: multiplicacao de 1 algarismo.
     else if (_fase >= 13 && _fase <= 14)
     {
         _x = irandom_range(1, 9);
@@ -55,7 +47,6 @@ function batalha_gerar_desafio(_fase)
         _resposta = _x * _y;
         _operacao = "x";
     }
-    // Fases 15 e 16: preserva exatamente o intervalo 10..98 do JS.
     else
     {
         _x = irandom_range(10, 98);
@@ -89,10 +80,8 @@ function batalha_iniciar(_inimigo = noone, _tutorial = false)
     var _controlador = instance_create_depth(0, 0, -1000, obj_battle_controller);
 _controlador.enemy_source = _inimigo;
 
-// tutorial_mode poderá ser desativado depois dos quatro passos.
 _controlador.tutorial_mode = _tutorial;
 
-// Esta variável nunca muda durante a batalha.
 _controlador.battle_started_as_tutorial = _tutorial;
 
 _controlador.guided_tutorial_completed = false;

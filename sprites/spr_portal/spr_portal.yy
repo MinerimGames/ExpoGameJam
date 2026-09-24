@@ -120,4 +120,3 @@
   "VTile":false,
   "width":64,
 }
-}

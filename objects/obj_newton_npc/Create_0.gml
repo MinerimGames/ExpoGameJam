@@ -1,7 +1,14 @@
-/// Isleide Newton - NPC introdutor da historia e do tutorial.
+sprite_index = spr_battle_newton;
 
 image_index = 0;
 image_speed = 0;
+
+var _altura_no_mapa = 28;
+
+var _escala = _altura_no_mapa / 630;
+
+image_xscale = _escala;
+image_yscale = _escala;
 interaction_distance = 78;
 interaction_available = false;
 dialogue_active = false;
@@ -11,7 +18,6 @@ tutorial_started = false;
 tutorial_completed = false;
 portal_created = false;
 
-// A historia fica em paginas curtas para caber bem no balao.
 dialogue_intro = [
     "Finalmente! Eu estava esperando você. A linha do tempo sofreu uma ruptura, e não foi uma ruptura comum.",
     "Incursões multiversais começaram a acontecer: universos diferentes estão se cruzando e tentando ocupar o mesmo lugar ao mesmo tempo.",
@@ -24,12 +30,9 @@ dialogue_intro = [
 ];
 
 dialogue_post = [
-    "Excelente! Voce entendeu o principio: primeiro raciocine, depois aja. Nas incursoes reais, os calculos ficarao cada vez mais dificeis.",
-    "Agora siga em frente e feche os pontos de incursao. Se os universos continuarem se cruzando, a linha do tempo pode colapsar de vez.",
-    "Estabilizei um portal atrás de mim. Atravesse-o quando estiver pronto para entrar na primeira realidade fragmentada."
     "Excelente! Você entendeu o princípio: primeiro, raciocine; depois, aja. Nas incursões reais, os cálculos ficarão cada vez mais difíceis.",
     "Agora, siga em frente e feche os pontos de incursão. Se os universos continuarem se cruzando, a linha do tempo poderá entrar em colapso de uma vez por todas.",
-    "Estabilizei um portal atrás de mim. Atravesse-o quando estiver pronto para encerrar esta demonstração."
+    "Estabilizei um portal atrás de mim. Atravesse-o quando estiver pronto para entrar na primeira realidade fragmentada."
 ];
 
 dialogue_reminder = [
@@ -66,7 +69,6 @@ start_post_dialogue = function()
     npc_lock_player(true);
 };
 
-// Transformacao de GUI baseada na mesma referencia 960x540 da batalha.
 npc_ui_scale = 1;
 npc_ui_offset_x = 0;
 npc_ui_offset_y = 0;

@@ -1,5 +1,3 @@
-/// O encontro começa quando o jogador se aproxima.
-
 if (instance_exists(obj_battle_controller) || !instance_exists(obj_player))
     exit;
 

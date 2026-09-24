@@ -1,6 +1,3 @@
-/// Controle principal da batalha.
-/// Equivalente ao estado global de battle.js + challenge.js.
-
 player_hp = 100;
 enemy_hp = 100;
 player_hp_max = 100;
@@ -25,28 +22,22 @@ enemy_battle_sprite = spr_battle_newton;
 enemy_battle_blend = c_white;
 enemy_battle_scale = 0.40;
 
-// Indica se a fase guiada está acontecendo neste momento.
 tutorial_mode = false;
 
-// Permanece verdadeiro mesmo depois que a fase guiada termina.
-// Isso permite que o jogo reconheça a batalha contra Newton.
 battle_started_as_tutorial = false;
 
-// Indica que os quatro passos obrigatórios já foram concluídos.
 guided_tutorial_completed = false;
 
 tutorial_step = 0;
 tutorial_actions = ["attack", "heal", "defense", "dodge"];
 tutorial_labels = ["ATAQUE", "CURA", "DEFESA", "ESQUIVA"];
 
-// Referencia visual baseada na arena 960x540 do CSS original.
 ui_reference_width = 960;
 ui_reference_height = 540;
 ui_scale = 1;
 ui_offset_x = 0;
 ui_offset_y = 0;
 
-// Cores aproximadas do CSS original.
 col_purple = make_color_rgb(64, 17, 110);
 col_yellow = make_color_rgb(240, 221, 71);
 col_green = make_color_rgb(57, 230, 57);
@@ -75,9 +66,6 @@ ry = function(_y)
     return ui_offset_y + _y * ui_scale;
 };
 
-// Helpers de desenho precisam ser metodos da instancia.
-// Funcoes anonimas locais no Draw GUI nao devem depender de variaveis locais
-// como ui_scale/_sx, pois o escopo muda quando elas sao executadas.
 draw_ui_box = function(_x, _y, _w, _h, _fill, _border, _border_size)
 {
     draw_set_color(_border);
@@ -193,7 +181,7 @@ show_result = function(_text)
 {
     result_text = _text;
     result_visible = true;
-    result_timer = max(1, round(room_speed * 0.9));
+    result_timer = max(1, round(game_get_speed(gamespeed_fps) * 0.9));
 };
 
 finish_check = function()
@@ -321,12 +309,10 @@ execute_pending_action = function()
         case "dodge": execute_dodge(); break;
     }
 
-// Durante a fase guiada, cada ação correta avança uma etapa.
 if (tutorial_mode && battle_screen != "defeat")
 {
     tutorial_step += 1;
 
-    // Depois das quatro ações, libera a batalha normal.
     if (tutorial_step >= array_length(tutorial_actions))
     {
         tutorial_mode = false;
@@ -406,20 +392,56 @@ verify_answer = function()
 
 restart_battle = function()
 {
-    player_hp_max = 100;
-    enemy_hp_max = tutorial_mode ? 200 : enemy_hp_max;
+    player_hp = player_hp_max;
+    enemy_hp = enemy_hp_max;
+
     pending_action = "";
+    challenge = undefined;
     answer_text = "";
     keyboard_string = "";
 
     result_visible = false;
+    result_text = "";
     result_timer = 0;
+
+    tutorial_mode = battle_started_as_tutorial;
+    tutorial_step = 0;
+    math_phase = 1;
+
+    if (tutorial_mode)
+    {
+        battle_message = "Siga as instruções do painel superior.";
+    }
+    else
+    {
+        if (instance_exists(enemy_source))
+        {
+            if (variable_instance_exists(enemy_source, "battle_math_phase"))
+            {
+                math_phase = enemy_source.battle_math_phase;
+            }
+        }
+
+        battle_message = "Derrote a criatura e estabilize a incursão.";
+    }
 
     battle_screen = "actions";
 };
 
 leave_after_victory = function()
 {
+	   
+    if (!battle_started_as_tutorial)
+    {
+        if (instance_exists(enemy_source))
+        {
+            if (enemy_source.object_index == obj_cavern_isleide)
+            {
+                room_goto(rm_demo_end);
+                return;
+            }
+        }
+    }
     if (battle_started_as_tutorial)
     {
         if (instance_exists(enemy_source))

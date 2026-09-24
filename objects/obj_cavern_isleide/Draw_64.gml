@@ -1,5 +1,3 @@
-/// Fala incompreensível antes da luta.
-
 if (!dialogue_active || instance_exists(obj_battle_controller))
     exit;
 

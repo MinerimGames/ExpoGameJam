@@ -4,7 +4,6 @@ var _gui_height = display_get_gui_height();
 draw_set_alpha(1);
 draw_set_color(c_white);
 
-// Reaproveita o fundo do menu.
 draw_sprite(
     spr_menu_background,
     0,
@@ -12,7 +11,6 @@ draw_sprite(
     0
 );
 
-// Escurece o fundo.
 draw_set_alpha(0.72);
 draw_set_color(c_black);
 
@@ -26,13 +24,11 @@ draw_rectangle(
 
 draw_set_alpha(1);
 
-// Painel
 var _panel_left = 90;
 var _panel_top = 75;
 var _panel_right = 550;
 var _panel_bottom = 305;
 
-// Sombra amarela
 draw_set_color(make_color_rgb(240, 221, 71));
 
 draw_rectangle(
@@ -43,7 +39,6 @@ draw_rectangle(
     false
 );
 
-// Fundo branco
 draw_set_color(c_white);
 
 draw_rectangle(
@@ -54,7 +49,6 @@ draw_rectangle(
     false
 );
 
-// Contorno roxo
 var _purple = make_color_rgb(64, 17, 110);
 
 draw_set_color(_purple);
@@ -75,7 +69,6 @@ draw_rectangle(
     true
 );
 
-// Textos
 draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
 
@@ -128,7 +121,6 @@ draw_text(
     "ENTER - VOLTAR AO MENU"
 );
 
-// Restaura as configurações
 draw_set_alpha(1);
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);

@@ -1,4 +1,3 @@
-/// Transmissão de Newton sem colocá-lo fisicamente no cenário.
 dialogue_page = 0;
 dialogue_active = true;
 dialogue_pages = [

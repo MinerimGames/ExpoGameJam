@@ -1,12 +1,12 @@
-/// Primeiro inimigo da realidade quebrada das cavernas.
-
 image_index = 0;
 image_speed = 0;
-image_xscale = 0.10;
-image_yscale = 0.10;
+var _escala = 30 / 580;
+
+image_xscale = _escala;
+image_yscale = _escala;
 depth = -25;
 
-encounter_distance = 125;
+encounter_distance = 32;
 encounter_started = false;
 dialogue_active = false;
 dialogue_page = 0;

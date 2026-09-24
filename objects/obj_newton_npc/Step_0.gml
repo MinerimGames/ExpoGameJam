@@ -1,8 +1,5 @@
-/// Interacao do NPC.
-
 interaction_available = false;
 
-// Durante a batalha a interface do NPC fica silenciosa.
 if (instance_exists(obj_battle_controller))
 {
     exit;
@@ -15,7 +12,8 @@ if (!instance_exists(obj_player))
 
 var _player = instance_find(obj_player, 0);
 var _near = point_distance(x, y, _player.x, _player.y) <= interaction_distance;
-var _advance = keyboard_check_pressed(ord("E")) || keyboard_check_pressed(vk_space);
+var _advance = keyboard_check_pressed(ord("E"))
+    || keyboard_check_pressed(vk_space);
 
 if (dialogue_active)
 {
@@ -43,37 +41,20 @@ if (dialogue_active)
             {
                 npc_lock_player(false);
 
-                // Passagem para a primeira realidade das cavernas.
                 if (dialogue_mode == "post" && !portal_created)
                 {
                     portal_created = true;
-                    var _portal = instance_create_layer(x + 36, y + 12, "enemies", obj_portal);
+
+                    var _portal = instance_create_layer(
+                        x + 36,
+                        y + 12,
+                        "enemies",
+                        obj_portal
+                    );
+
                     _portal.depth = depth + 1;
                 }
             }
-{
-    tutorial_started = true;
-    batalha_iniciar(id, true);
-}
-else
-{
-    npc_lock_player(false);
-
-    // Depois do diálogo pós-batalha, cria o portal.
-    if (dialogue_mode == "post" && !portal_created)
-    {
-        portal_created = true;
-
-        var _portal = instance_create_layer(
-            x + 36,
-            y +12,
-            "enemies",
-            obj_portal
-        );
-
-        _portal.depth = depth + 1;
-    }
-}
         }
     }
 
