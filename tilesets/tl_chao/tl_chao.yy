@@ -1,0 +1,38 @@
+{
+  "$GMTileSet":"v1",
+  "%Name":"tl_chao",
+  "autoTileSets":[],
+  "macroPageTiles":{
+    "SerialiseHeight":0,
+    "SerialiseWidth":0,
+    "TileSerialiseData":[],
+  },
+  "name":"tl_chao",
+  "out_columns":13,
+  "out_tilehborder":2,
+  "out_tilevborder":2,
+  "parent":{
+    "name":"tl_medieval",
+    "path":"folders/Tile Sets/tl_medieval.yy",
+  },
+  "resourceType":"GMTileSet",
+  "resourceVersion":"2.0",
+  "spriteId":{
+    "name":"spr_tiles_chao",
+    "path":"sprites/spr_tiles_chao/spr_tiles_chao.yy",
+  },
+  "spriteNoExport":false,
+  "textureGroupId":{
+    "name":"Default",
+    "path":"texturegroups/Default",
+  },
+  "tileAnimationFrames":[],
+  "tileAnimationSpeed":15.0,
+  "tileHeight":16,
+  "tilehsep":0,
+  "tilevsep":0,
+  "tileWidth":16,
+  "tilexoff":0,
+  "tileyoff":0,
+  "tile_count":168,
+}

@@ -1,4 +1,4 @@
-sprite_index = spr_portal;
+ sprite_index = spr_portal;
 image_index = 0;
 image_speed = 1;
 image_alpha = 0;

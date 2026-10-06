@@ -1,4 +1,4 @@
-display_set_gui_size(640, 380);
+ display_set_gui_size(640, 380);
 window_set_showborder(true);
 window_set_size(960, 570);
 window_center();

@@ -1,4 +1,4 @@
-if (keyboard_check_pressed(vk_f11))
+ if (keyboard_check_pressed(vk_f11))
 {
     window_set_fullscreen(!window_get_fullscreen());
 }
@@ -15,7 +15,7 @@ if (show_controls)
     }
 
     exit;
-}
+} 
 
 var _option_count = array_length(menu_options);
 
