@@ -1,4 +1,6 @@
+batalha_animacao_atualizar(id);
 update_ui_transform();
+player_pose_timer = max(0, player_pose_timer - 1);
 
 if (result_visible)
 {
@@ -9,15 +11,17 @@ if (result_visible)
     }
 }
 
-var _mx = (device_mouse_x_to_gui(0) - ui_offset_x) / ui_scale;
-var _my = (device_mouse_y_to_gui(0) - ui_offset_y) / ui_scale;
+var _mx = (ui_mouse_x_to_gui(0) - ui_offset_x) / ui_scale;
+var _my = (ui_mouse_y_to_gui(0) - ui_offset_y) / ui_scale;
 var _click = mouse_check_button_pressed(mb_left);
+if (handle_test_skip(_mx, _my, _click)) exit;
+if (handle_paradox_input(_mx, _my, _click, keyboard_check_pressed(ord("Q")))) exit;
 
 switch (battle_screen)
 {
     case "actions":
     {
-        
+
         if ((_click && inside_ref_rect(_mx, _my, 660, 325, 140, 90)) || keyboard_check_pressed(ord("1")))
         {
             request_action("attack");
@@ -39,7 +43,7 @@ switch (battle_screen)
 
     case "challenge":
     {
-      
+
         answer_text = string_digits(keyboard_string);
 
         if (string_length(answer_text) > 5)

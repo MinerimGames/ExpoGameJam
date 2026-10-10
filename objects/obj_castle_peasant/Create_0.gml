@@ -1,0 +1,21 @@
+// Population assigns each of the six variants exactly once after creation.
+sprite_index = spr_castle_peasant_1;
+visual_scale = 30 / sprite_get_height(sprite_index);
+image_speed = 0;
+image_index = 0;
+animation_time = random(5);
+walking = false;
+walk_direction = 0;
+state_time = random_range(0.3, 1.5);
+walk_speed = random_range(25, 36);
+current_speed = 0;
+walk_acceleration = 80;
+walk_target_x = x;
+walk_target_y = y;
+cutout_texel = shader_get_uniform(shd_peasant_cutout, "u_texel");
+cutout_bounds = shader_get_uniform(shd_peasant_cutout, "u_bounds");
+home_left = x;
+home_top = y;
+home_right = x;
+home_bottom = y;
+depth = room == rm_vila ? 410 : 210;

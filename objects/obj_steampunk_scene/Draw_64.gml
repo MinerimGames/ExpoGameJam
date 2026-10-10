@@ -1,0 +1,15 @@
+if(instance_exists(obj_battle_controller))exit;
+var _intro=instance_find(obj_newton_cavern_dialogue,0);
+if(instance_exists(_intro) && _intro.dialogue_active)exit;
+var _boss_asset=asset_get_index("obj_isleide_steampunk");
+var _boss=_boss_asset==-1?noone:instance_find(_boss_asset,0);
+if(instance_exists(_boss) && _boss.dialogue_active)exit;
+var _old_colour=draw_get_color();var _old_alpha=draw_get_alpha();var _old_font=draw_get_font();
+var _hint=instance_exists(exit_gate)?"ENFRENTE A ÂNCORA DO RELÓGIO":"PORTAL ABERTO - ATRAVESSE-O";
+draw_set_font(fnt_ui);draw_set_halign(fa_right);draw_set_valign(fa_top);
+draw_set_color(c_black);draw_set_alpha(0.60);
+draw_rectangle(display_get_gui_width()-290,7,display_get_gui_width()-7,31,false);
+draw_set_alpha(1);draw_set_color(make_color_rgb(248,220,152));
+draw_text_transformed(display_get_gui_width()-13,12,_hint,0.55,0.55,0);
+draw_set_halign(fa_left);draw_set_valign(fa_top);
+draw_set_font(_old_font);draw_set_alpha(_old_alpha);draw_set_color(_old_colour);

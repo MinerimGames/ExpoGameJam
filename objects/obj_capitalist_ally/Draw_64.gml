@@ -1,0 +1,1 @@
+if(dialogue_active)historia_newton_desenhar_dialogo(dialogue_pages[dialogue_page],dialogue_page,array_length(dialogue_pages));

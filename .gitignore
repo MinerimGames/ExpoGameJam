@@ -1,43 +1,43 @@
 # Windows
- 
+
 # Windows thumbnail cache files
 Thumbs.db
 Thumbs.db:encryptable
 ehthumbs.db
 ehthumbs_vista.db
- 
+
 # Dump file
 *.stackdump
- 
+
 # Folder config file
 [Dd]esktop.ini
- 
+
 # Recycle Bin used on file shares
 $RECYCLE.BIN/
- 
+
 # Windows Installer files
 *.cab
 *.msi
 *.msix
 *.msm
 *.msp
- 
+
 # Windows shortcuts
 *.lnk
- 
+
 # Mac
- 
+
 ## General
 .DS_Store
 .AppleDouble
 .LSOverride
- 
+
 ## Icon must end with two \r
 Icon
- 
+
 ## Thumbnails
 ._*
- 
+
 ## Files that might appear in the root of a volume
 .DocumentRevisions-V100
 .fseventsd
@@ -46,17 +46,71 @@ Icon
 .Trashes
 .VolumeIcon.icns
 .com.apple.timemachine.donotpresent
- 
+
 ## Directories potentially created on remote AFP share
 .AppleDB
 .AppleDesktop
 Network Trash Folder
 Temporary Items
 .apdisk
- 
+
 # GameMaker temporary files
 *.resource_order
 *.old
+*.backup
 
 # GMRT build directory
 Build
+
+# Local secrets and authentication configuration
+.env
+.env.*
+!.env.example
+!.env.sample
+!.env.template
+.npmrc
+.pypirc
+.netrc
+.git-credentials
+.aws/
+.ssh/
+.codex/
+credentials.json
+credentials.local.*
+secrets.json
+secrets.local.*
+service-account*.json
+*.pem
+*.key
+*.p12
+*.pfx
+*.keystore
+*.jks
+id_rsa
+id_ed25519
+
+# Local exports, caches and diagnostic captures
+/dist/
+__pycache__/
+*.pyc
+*.log
+*.win
+*.exe
+/output/*
+!/output/imagegen/
+/output/imagegen/*in-game*.png
+!/output/credits/
+!/output/steampunk/
+!/output/city-flags/
+!/output/city-rebuild/
+!/output/menu/
+!/output/audio/
+/output/audio/*
+!/output/audio/manifest.json
+!/output/audio/newton-recording.json
+!/output/audio/newton-transform-original.mpeg
+!/output/audio/previous-synth-footsteps.json
+!/output/audio/README.md
+!/output/ending-20261010/
+/output/ending-20261010/*
+!/output/ending-20261010/import.json

@@ -19,17 +19,8 @@ draw_rectangle(_ox + 70 * _scale, _oy + 350 * _scale, _ox + 890 * _scale, _oy + 
 draw_set_color(c_white);
 draw_rectangle(_ox + 76 * _scale, _oy + 356 * _scale, _ox + 884 * _scale, _oy + 509 * _scale, false);
 
-draw_sprite_ext(
-    spr_isleide_cavernas,
-    0,
-    _ox + 152 * _scale,
-    _oy + 505 * _scale,
-    0.22 * _scale,
-    0.22 * _scale,
-    0,
-    c_white,
-    1
-);
+mundo_desenhar_personagem(spr_isleide_cavernas,_ox+152*_scale,
+    _oy+505*_scale,134*_scale,1,0,134*_scale);
 
 draw_set_font(fnt_ui);
 draw_set_halign(fa_left);

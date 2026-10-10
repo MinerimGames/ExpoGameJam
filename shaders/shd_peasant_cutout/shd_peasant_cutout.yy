@@ -1,0 +1,9 @@
+{
+  "$GMShader":"",
+  "%Name":"shd_peasant_cutout",
+  "name":"shd_peasant_cutout",
+  "parent":{"name":"Objects","path":"folders/Objects.yy"},
+  "resourceType":"GMShader",
+  "resourceVersion":"2.0",
+  "type":1
+}

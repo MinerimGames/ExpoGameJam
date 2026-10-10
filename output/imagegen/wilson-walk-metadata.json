@@ -1,0 +1,164 @@
+[
+  {
+    "x": 112,
+    "y": 14,
+    "w": 143,
+    "h": 269,
+    "anchor": 70.5,
+    "height": 271.0,
+    "art": "spr_wilson_walk_atlas"
+  },
+  {
+    "x": 395,
+    "y": 14,
+    "w": 144,
+    "h": 272,
+    "anchor": 71.5,
+    "height": 271.0,
+    "art": "spr_wilson_walk_atlas"
+  },
+  {
+    "x": 671,
+    "y": 14,
+    "w": 141,
+    "h": 270,
+    "anchor": 69.5,
+    "height": 271.0,
+    "art": "spr_wilson_walk_atlas"
+  },
+  {
+    "x": 954,
+    "y": 14,
+    "w": 145,
+    "h": 271,
+    "anchor": 72.0,
+    "height": 271.0,
+    "art": "spr_wilson_walk_atlas"
+  },
+  {
+    "x": 1233,
+    "y": 14,
+    "w": 145,
+    "h": 271,
+    "anchor": 72.5,
+    "height": 271.0,
+    "art": "spr_wilson_walk_atlas"
+  },
+  {
+    "x": 1519,
+    "y": 14,
+    "w": 143,
+    "h": 272,
+    "anchor": 71.0,
+    "height": 271.0,
+    "art": "spr_wilson_walk_atlas"
+  },
+  {
+    "x": 113,
+    "y": 303,
+    "w": 142,
+    "h": 272,
+    "anchor": 70.0,
+    "height": 271.5,
+    "art": "spr_wilson_walk_atlas"
+  },
+  {
+    "x": 393,
+    "y": 303,
+    "w": 146,
+    "h": 271,
+    "anchor": 72.5,
+    "height": 271.5,
+    "art": "spr_wilson_walk_atlas"
+  },
+  {
+    "x": 665,
+    "y": 303,
+    "w": 149,
+    "h": 272,
+    "anchor": 74.5,
+    "height": 271.5,
+    "art": "spr_wilson_walk_atlas"
+  },
+  {
+    "x": 951,
+    "y": 303,
+    "w": 149,
+    "h": 268,
+    "anchor": 74.0,
+    "height": 271.5,
+    "art": "spr_wilson_walk_atlas"
+  },
+  {
+    "x": 1231,
+    "y": 303,
+    "w": 148,
+    "h": 272,
+    "anchor": 74.0,
+    "height": 271.5,
+    "art": "spr_wilson_walk_atlas"
+  },
+  {
+    "x": 1517,
+    "y": 303,
+    "w": 146,
+    "h": 270,
+    "anchor": 73.5,
+    "height": 271.5,
+    "art": "spr_wilson_walk_atlas"
+  },
+  {
+    "x": 65,
+    "y": 109,
+    "w": 203,
+    "h": 510,
+    "anchor": 87.0,
+    "height": 510.0,
+    "art": "spr_wilson_side_walk"
+  },
+  {
+    "x": 367,
+    "y": 109,
+    "w": 322,
+    "h": 510,
+    "anchor": 142.0,
+    "height": 510.0,
+    "art": "spr_wilson_side_walk"
+  },
+  {
+    "x": 770,
+    "y": 109,
+    "w": 249,
+    "h": 510,
+    "anchor": 124.0,
+    "height": 510.0,
+    "art": "spr_wilson_side_walk"
+  },
+  {
+    "x": 1136,
+    "y": 109,
+    "w": 201,
+    "h": 510,
+    "anchor": 89.0,
+    "height": 510.0,
+    "art": "spr_wilson_side_walk"
+  },
+  {
+    "x": 1448,
+    "y": 109,
+    "w": 323,
+    "h": 510,
+    "anchor": 147.0,
+    "height": 510.0,
+    "art": "spr_wilson_side_walk"
+  },
+  {
+    "x": 1878,
+    "y": 109,
+    "w": 258,
+    "h": 510,
+    "anchor": 99.5,
+    "height": 510.0,
+    "art": "spr_wilson_side_walk"
+  }
+]

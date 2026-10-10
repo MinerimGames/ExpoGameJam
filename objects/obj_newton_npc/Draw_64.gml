@@ -9,6 +9,16 @@ var _purple = make_color_rgb(64, 17, 110);
 var _yellow = make_color_rgb(240, 221, 71);
 var _white = c_white;
 
+if (dialogue_active && dialogue_mode == "intro")
+{
+    npc_draw_box(675, 300, 200, 42, _white, _purple, 4);
+    draw_set_halign(fa_center);
+    draw_set_valign(fa_middle);
+    npc_draw_text(775, 321, "PULAR TUTORIAL", 0.72, _purple);
+    draw_set_halign(fa_left);
+    draw_set_valign(fa_top);
+}
+
 if (interaction_available && !dialogue_active)
 {
     npc_draw_box(330, 472, 300, 46, _white, _purple, 4);
@@ -37,7 +47,11 @@ draw_triangle(npc_rx(171), npc_ry(509), npc_rx(198), npc_ry(509), npc_rx(176), n
 
 if (sprite_exists(spr_battle_newton))
 {
-    draw_sprite_ext(spr_battle_newton, 0, npc_rx(145), npc_ry(493), 0.17 * npc_ui_scale, 0.17 * npc_ui_scale, 0, c_white, 1);
+    // Smaller motion than the world pose keeps the portrait inside its column.
+    var _portrait_breath=1+sin(idle_time*2.4)*0.010;
+    var _portrait_sway=sin(idle_time*1.6)*0.85;
+    mundo_desenhar_personagem(spr_battle_newton,npc_rx(145),npc_ry(493),
+        134*npc_ui_scale*_portrait_breath,1,_portrait_sway,134*npc_ui_scale);
 }
 
 npc_draw_text(205, 367, "ISLEIDE NEWTON", 1.05, _purple);

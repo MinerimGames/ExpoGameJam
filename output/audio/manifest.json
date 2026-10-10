@@ -1,0 +1,615 @@
+{
+  "title": "Paradoxo de Wilson: original multiverse soundtrack and sound palette",
+  "license": "CC0-1.0",
+  "provenance": "Original procedural score, ambience and combat cues; footsteps from Kenney Impact Sounds, CC0-1.0.",
+  "sample_rate": 44100,
+  "format": "WAV PCM16",
+  "seed": 20261007,
+  "recommended_music_gain": 0.32,
+  "recommended_ambience_gain": 0.16,
+  "recommended_footstep_gain": 0.38,
+  "resources": [
+    {
+      "id": {
+        "name": "snd_music_exploration",
+        "path": "sounds/snd_music_exploration/snd_music_exploration.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "snd_music_battle",
+        "path": "sounds/snd_music_battle/snd_music_battle.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "snd_music_newton",
+        "path": "sounds/snd_music_newton/snd_music_newton.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "snd_music_ending",
+        "path": "sounds/snd_music_ending/snd_music_ending.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "snd_ui_select",
+        "path": "sounds/snd_ui_select/snd_ui_select.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "snd_correct",
+        "path": "sounds/snd_correct/snd_correct.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "snd_wrong",
+        "path": "sounds/snd_wrong/snd_wrong.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "snd_attack",
+        "path": "sounds/snd_attack/snd_attack.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "snd_defense",
+        "path": "sounds/snd_defense/snd_defense.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "snd_heal",
+        "path": "sounds/snd_heal/snd_heal.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "snd_dodge",
+        "path": "sounds/snd_dodge/snd_dodge.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "snd_portal",
+        "path": "sounds/snd_portal/snd_portal.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "snd_transformation",
+        "path": "sounds/snd_transformation/snd_transformation.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "snd_levelup",
+        "path": "sounds/snd_levelup/snd_levelup.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "snd_victory",
+        "path": "sounds/snd_victory/snd_victory.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "snd_defeat",
+        "path": "sounds/snd_defeat/snd_defeat.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "snd_step_grass",
+        "path": "sounds/snd_step_grass/snd_step_grass.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "snd_step_leaves",
+        "path": "sounds/snd_step_leaves/snd_step_leaves.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "snd_step_dirt",
+        "path": "sounds/snd_step_dirt/snd_step_dirt.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "snd_step_gravel",
+        "path": "sounds/snd_step_gravel/snd_step_gravel.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "snd_step_cave",
+        "path": "sounds/snd_step_cave/snd_step_cave.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "snd_step_stone",
+        "path": "sounds/snd_step_stone/snd_step_stone.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "snd_step_wood",
+        "path": "sounds/snd_step_wood/snd_step_wood.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "snd_step_marble",
+        "path": "sounds/snd_step_marble/snd_step_marble.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "snd_step_cobbles",
+        "path": "sounds/snd_step_cobbles/snd_step_cobbles.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "snd_step_dockwood",
+        "path": "sounds/snd_step_dockwood/snd_step_dockwood.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "snd_amb_forest",
+        "path": "sounds/snd_amb_forest/snd_amb_forest.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "snd_amb_cave",
+        "path": "sounds/snd_amb_cave/snd_amb_cave.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "snd_amb_castle",
+        "path": "sounds/snd_amb_castle/snd_amb_castle.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "snd_amb_ghostcity",
+        "path": "sounds/snd_amb_ghostcity/snd_amb_ghostcity.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "snd_amb_port",
+        "path": "sounds/snd_amb_port/snd_amb_port.yy"
+      }
+    }
+  ],
+  "assets": [
+    {
+      "name": "snd_music_exploration",
+      "resource_path": "sounds/snd_music_exploration/snd_music_exploration.yy",
+      "wave_path": "sounds/snd_music_exploration/snd_music_exploration.wav",
+      "category": "music",
+      "duration_seconds": 40.0,
+      "loop": true,
+      "bpm": 96,
+      "peak_dbfs": -2.85,
+      "rms_dbfs": -17.68,
+      "description": "Wilson's Motif: A minor harp arpeggios, airy warm pads, expressive melody and soft pulse; 16 bars."
+    },
+    {
+      "name": "snd_music_battle",
+      "resource_path": "sounds/snd_music_battle/snd_music_battle.yy",
+      "wave_path": "sounds/snd_music_battle/snd_music_battle.wav",
+      "category": "music",
+      "duration_seconds": 32.0,
+      "loop": true,
+      "bpm": 120,
+      "peak_dbfs": -2.85,
+      "rms_dbfs": -17.3,
+      "description": "The Equation Breaks: urgent sixteenth-note harp pulse, bass, drum accents and Wilson motif in the lower register; 16 bars."
+    },
+    {
+      "name": "snd_music_newton",
+      "resource_path": "sounds/snd_music_newton/snd_music_newton.yy",
+      "wave_path": "sounds/snd_music_newton/snd_music_newton.wav",
+      "category": "music",
+      "duration_seconds": 32.0,
+      "loop": true,
+      "bpm": 120,
+      "peak_dbfs": -2.85,
+      "rms_dbfs": -17.2,
+      "description": "Newton's Gravity: suspended chromatic pads, low pulse, distant bells and fragmented Wilson motif; 16 bars."
+    },
+    {
+      "name": "snd_music_ending",
+      "resource_path": "sounds/snd_music_ending/snd_music_ending.yy",
+      "wave_path": "sounds/snd_music_ending/snd_music_ending.wav",
+      "category": "music",
+      "duration_seconds": 10.0,
+      "loop": false,
+      "bpm": 96,
+      "peak_dbfs": -2.85,
+      "rms_dbfs": -16.84,
+      "description": "The Multiverse Remembers: Wilson motif resolves to C major over rising bells and a warm final cadence; 4 bars."
+    },
+    {
+      "name": "snd_ui_select",
+      "resource_path": "sounds/snd_ui_select/snd_ui_select.yy",
+      "wave_path": "sounds/snd_ui_select/snd_ui_select.wav",
+      "category": "effect",
+      "duration_seconds": 0.63,
+      "loop": false,
+      "bpm": null,
+      "peak_dbfs": -3.1,
+      "rms_dbfs": -13.61,
+      "description": "Original synthesized ui select cue."
+    },
+    {
+      "name": "snd_correct",
+      "resource_path": "sounds/snd_correct/snd_correct.yy",
+      "wave_path": "sounds/snd_correct/snd_correct.wav",
+      "category": "effect",
+      "duration_seconds": 0.86,
+      "loop": false,
+      "bpm": null,
+      "peak_dbfs": -3.1,
+      "rms_dbfs": -14.88,
+      "description": "Original synthesized correct cue."
+    },
+    {
+      "name": "snd_wrong",
+      "resource_path": "sounds/snd_wrong/snd_wrong.yy",
+      "wave_path": "sounds/snd_wrong/snd_wrong.wav",
+      "category": "effect",
+      "duration_seconds": 0.78,
+      "loop": false,
+      "bpm": null,
+      "peak_dbfs": -3.1,
+      "rms_dbfs": -14.53,
+      "description": "Original synthesized wrong cue."
+    },
+    {
+      "name": "snd_attack",
+      "resource_path": "sounds/snd_attack/snd_attack.yy",
+      "wave_path": "sounds/snd_attack/snd_attack.wav",
+      "category": "effect",
+      "duration_seconds": 0.23,
+      "loop": false,
+      "bpm": null,
+      "peak_dbfs": -3.1,
+      "rms_dbfs": -20.09,
+      "description": "Original synthesized attack cue."
+    },
+    {
+      "name": "snd_defense",
+      "resource_path": "sounds/snd_defense/snd_defense.yy",
+      "wave_path": "sounds/snd_defense/snd_defense.wav",
+      "category": "effect",
+      "duration_seconds": 0.4,
+      "loop": false,
+      "bpm": null,
+      "peak_dbfs": -3.1,
+      "rms_dbfs": -17.94,
+      "description": "Original synthesized defense cue."
+    },
+    {
+      "name": "snd_heal",
+      "resource_path": "sounds/snd_heal/snd_heal.yy",
+      "wave_path": "sounds/snd_heal/snd_heal.wav",
+      "category": "effect",
+      "duration_seconds": 1.22,
+      "loop": false,
+      "bpm": null,
+      "peak_dbfs": -3.1,
+      "rms_dbfs": -15.09,
+      "description": "Original synthesized heal cue."
+    },
+    {
+      "name": "snd_dodge",
+      "resource_path": "sounds/snd_dodge/snd_dodge.yy",
+      "wave_path": "sounds/snd_dodge/snd_dodge.wav",
+      "category": "effect",
+      "duration_seconds": 0.23,
+      "loop": false,
+      "bpm": null,
+      "peak_dbfs": -3.1,
+      "rms_dbfs": -18.43,
+      "description": "Original synthesized dodge cue."
+    },
+    {
+      "name": "snd_portal",
+      "resource_path": "sounds/snd_portal/snd_portal.yy",
+      "wave_path": "sounds/snd_portal/snd_portal.wav",
+      "category": "effect",
+      "duration_seconds": 1.3,
+      "loop": false,
+      "bpm": null,
+      "peak_dbfs": -3.1,
+      "rms_dbfs": -12.74,
+      "description": "Original synthesized portal cue."
+    },
+    {
+      "name": "snd_transformation",
+      "resource_path": "sounds/snd_transformation/snd_transformation.yy",
+      "wave_path": "sounds/snd_transformation/snd_transformation.wav",
+      "category": "effect",
+      "duration_seconds": 1.8,
+      "loop": false,
+      "bpm": null,
+      "peak_dbfs": -3.1,
+      "rms_dbfs": -12.45,
+      "description": "Original synthesized transformation cue."
+    },
+    {
+      "name": "snd_levelup",
+      "resource_path": "sounds/snd_levelup/snd_levelup.yy",
+      "wave_path": "sounds/snd_levelup/snd_levelup.wav",
+      "category": "effect",
+      "duration_seconds": 1.2,
+      "loop": false,
+      "bpm": null,
+      "peak_dbfs": -3.1,
+      "rms_dbfs": -15.19,
+      "description": "Original synthesized levelup cue."
+    },
+    {
+      "name": "snd_victory",
+      "resource_path": "sounds/snd_victory/snd_victory.yy",
+      "wave_path": "sounds/snd_victory/snd_victory.wav",
+      "category": "effect",
+      "duration_seconds": 1.46,
+      "loop": false,
+      "bpm": null,
+      "peak_dbfs": -3.1,
+      "rms_dbfs": -13.97,
+      "description": "Original synthesized victory cue."
+    },
+    {
+      "name": "snd_defeat",
+      "resource_path": "sounds/snd_defeat/snd_defeat.yy",
+      "wave_path": "sounds/snd_defeat/snd_defeat.wav",
+      "category": "effect",
+      "duration_seconds": 1.38,
+      "loop": false,
+      "bpm": null,
+      "peak_dbfs": -3.1,
+      "rms_dbfs": -14.2,
+      "description": "Original synthesized defeat cue."
+    },
+    {
+      "name": "snd_step_grass",
+      "resource_path": "sounds/snd_step_grass/snd_step_grass.yy",
+      "wave_path": "sounds/snd_step_grass/snd_step_grass.wav",
+      "category": "footstep",
+      "duration_seconds": 0.13541950113378684,
+      "loop": false,
+      "bpm": null,
+      "peak_dbfs": -4.44,
+      "rms_dbfs": -22.86,
+      "description": "Kenney footstep foley; mono, quiet-tail trimmed, unchanged pitch.",
+      "source_url": "https://kenney.nl/assets/impact-sounds",
+      "source_path": "audio_sources/kenney-impact/footstep_grass_000.ogg",
+      "source_sha256": "9d49497777405d78d7cf7f2888e28277f3a23192300cfd1d79d54876b20f479f",
+      "source_license": "CC0-1.0"
+    },
+    {
+      "name": "snd_step_leaves",
+      "resource_path": "sounds/snd_step_leaves/snd_step_leaves.yy",
+      "wave_path": "sounds/snd_step_leaves/snd_step_leaves.wav",
+      "category": "footstep",
+      "duration_seconds": 0.14689342403628117,
+      "loop": false,
+      "bpm": null,
+      "peak_dbfs": -4.44,
+      "rms_dbfs": -22.46,
+      "description": "Kenney footstep foley; mono, quiet-tail trimmed, unchanged pitch.",
+      "source_url": "https://kenney.nl/assets/impact-sounds",
+      "source_path": "audio_sources/kenney-impact/footstep_grass_001.ogg",
+      "source_sha256": "fb28781bd22b2eefdc14077f1adf5c94d7fe9c3a130194633b55f3e0d39d9f04",
+      "source_license": "CC0-1.0"
+    },
+    {
+      "name": "snd_step_dirt",
+      "resource_path": "sounds/snd_step_dirt/snd_step_dirt.yy",
+      "wave_path": "sounds/snd_step_dirt/snd_step_dirt.wav",
+      "category": "footstep",
+      "duration_seconds": 0.1498639455782313,
+      "loop": false,
+      "bpm": null,
+      "peak_dbfs": -4.44,
+      "rms_dbfs": -22.31,
+      "description": "Kenney footstep foley; mono, quiet-tail trimmed, unchanged pitch.",
+      "source_url": "https://kenney.nl/assets/impact-sounds",
+      "source_path": "audio_sources/kenney-impact/footstep_grass_002.ogg",
+      "source_sha256": "73a520139f5be716a403bfe9c80e0e94d1e61d8e9de04a354b336392164b53dc",
+      "source_license": "CC0-1.0"
+    },
+    {
+      "name": "snd_step_gravel",
+      "resource_path": "sounds/snd_step_gravel/snd_step_gravel.yy",
+      "wave_path": "sounds/snd_step_gravel/snd_step_gravel.wav",
+      "category": "footstep",
+      "duration_seconds": 0.18040816326530612,
+      "loop": false,
+      "bpm": null,
+      "peak_dbfs": -4.44,
+      "rms_dbfs": -22.75,
+      "description": "Kenney footstep foley; mono, quiet-tail trimmed, unchanged pitch.",
+      "source_url": "https://kenney.nl/assets/impact-sounds",
+      "source_path": "audio_sources/kenney-impact/footstep_snow_000.ogg",
+      "source_sha256": "c05fa4a9dc9a7aabc04996466fb589537e49af76de9998d8f9e6270ec92dcef7",
+      "source_license": "CC0-1.0"
+    },
+    {
+      "name": "snd_step_cave",
+      "resource_path": "sounds/snd_step_cave/snd_step_cave.yy",
+      "wave_path": "sounds/snd_step_cave/snd_step_cave.wav",
+      "category": "footstep",
+      "duration_seconds": 0.11435374149659865,
+      "loop": false,
+      "bpm": null,
+      "peak_dbfs": -4.44,
+      "rms_dbfs": -19.43,
+      "description": "Kenney footstep foley; mono, quiet-tail trimmed, unchanged pitch.",
+      "source_url": "https://kenney.nl/assets/impact-sounds",
+      "source_path": "audio_sources/kenney-impact/footstep_concrete_004.ogg",
+      "source_sha256": "24dd8db2413e5b81ad181e1205c12a1c7801da5f85715d471b92a4b2f632e45e",
+      "source_license": "CC0-1.0"
+    },
+    {
+      "name": "snd_step_stone",
+      "resource_path": "sounds/snd_step_stone/snd_step_stone.yy",
+      "wave_path": "sounds/snd_step_stone/snd_step_stone.wav",
+      "category": "footstep",
+      "duration_seconds": 0.10591836734693877,
+      "loop": false,
+      "bpm": null,
+      "peak_dbfs": -4.44,
+      "rms_dbfs": -20.15,
+      "description": "Kenney footstep foley; mono, quiet-tail trimmed, unchanged pitch.",
+      "source_url": "https://kenney.nl/assets/impact-sounds",
+      "source_path": "audio_sources/kenney-impact/footstep_concrete_000.ogg",
+      "source_sha256": "d7267e183067757c92c169de2a379abea592cfca6b39bb2e8feea15221ad79fe",
+      "source_license": "CC0-1.0"
+    },
+    {
+      "name": "snd_step_wood",
+      "resource_path": "sounds/snd_step_wood/snd_step_wood.yy",
+      "wave_path": "sounds/snd_step_wood/snd_step_wood.wav",
+      "category": "footstep",
+      "duration_seconds": 0.24959183673469387,
+      "loop": false,
+      "bpm": null,
+      "peak_dbfs": -4.44,
+      "rms_dbfs": -24.88,
+      "description": "Kenney footstep foley; mono, quiet-tail trimmed, unchanged pitch.",
+      "source_url": "https://kenney.nl/assets/impact-sounds",
+      "source_path": "audio_sources/kenney-impact/footstep_wood_000.ogg",
+      "source_sha256": "5f1c252942a220d658121bd9417448cd19649ded9fff2ff15f6e50899373ce8e",
+      "source_license": "CC0-1.0"
+    },
+    {
+      "name": "snd_step_marble",
+      "resource_path": "sounds/snd_step_marble/snd_step_marble.yy",
+      "wave_path": "sounds/snd_step_marble/snd_step_marble.wav",
+      "category": "footstep",
+      "duration_seconds": 0.10764172335600906,
+      "loop": false,
+      "bpm": null,
+      "peak_dbfs": -4.44,
+      "rms_dbfs": -20.74,
+      "description": "Kenney footstep foley; mono, quiet-tail trimmed, unchanged pitch.",
+      "source_url": "https://kenney.nl/assets/impact-sounds",
+      "source_path": "audio_sources/kenney-impact/footstep_concrete_001.ogg",
+      "source_sha256": "507a75eb19b897087855a3be3cf11a12d7fa37d143ad535eeebe0b8031c7325d",
+      "source_license": "CC0-1.0"
+    },
+    {
+      "name": "snd_step_cobbles",
+      "resource_path": "sounds/snd_step_cobbles/snd_step_cobbles.yy",
+      "wave_path": "sounds/snd_step_cobbles/snd_step_cobbles.wav",
+      "category": "footstep",
+      "duration_seconds": 0.1127891156462585,
+      "loop": false,
+      "bpm": null,
+      "peak_dbfs": -4.44,
+      "rms_dbfs": -20.86,
+      "description": "Kenney footstep foley; mono, quiet-tail trimmed, unchanged pitch.",
+      "source_url": "https://kenney.nl/assets/impact-sounds",
+      "source_path": "audio_sources/kenney-impact/footstep_concrete_002.ogg",
+      "source_sha256": "b21fa546d74941196b25da8a20b7010abd8c05c4fcf93545d1f344e66a664e13",
+      "source_license": "CC0-1.0"
+    },
+    {
+      "name": "snd_step_dockwood",
+      "resource_path": "sounds/snd_step_dockwood/snd_step_dockwood.yy",
+      "wave_path": "sounds/snd_step_dockwood/snd_step_dockwood.wav",
+      "category": "footstep",
+      "duration_seconds": 0.2515646258503401,
+      "loop": false,
+      "bpm": null,
+      "peak_dbfs": -4.44,
+      "rms_dbfs": -24.27,
+      "description": "Kenney footstep foley; mono, quiet-tail trimmed, unchanged pitch.",
+      "source_url": "https://kenney.nl/assets/impact-sounds",
+      "source_path": "audio_sources/kenney-impact/footstep_wood_001.ogg",
+      "source_sha256": "e4f68e1c9fd55b4dc8ca89ed2bbab6f200171bc54bdc18aa96b80d8e7336f462",
+      "source_license": "CC0-1.0"
+    },
+    {
+      "name": "snd_amb_forest",
+      "resource_path": "sounds/snd_amb_forest/snd_amb_forest.yy",
+      "wave_path": "sounds/snd_amb_forest/snd_amb_forest.wav",
+      "category": "ambience",
+      "duration_seconds": 8.0,
+      "loop": true,
+      "bpm": null,
+      "peak_dbfs": -9.37,
+      "rms_dbfs": -24.73,
+      "description": "Quiet original forest environment bed."
+    },
+    {
+      "name": "snd_amb_cave",
+      "resource_path": "sounds/snd_amb_cave/snd_amb_cave.yy",
+      "wave_path": "sounds/snd_amb_cave/snd_amb_cave.wav",
+      "category": "ambience",
+      "duration_seconds": 8.0,
+      "loop": true,
+      "bpm": null,
+      "peak_dbfs": -9.37,
+      "rms_dbfs": -24.33,
+      "description": "Quiet original cave environment bed."
+    },
+    {
+      "name": "snd_amb_castle",
+      "resource_path": "sounds/snd_amb_castle/snd_amb_castle.yy",
+      "wave_path": "sounds/snd_amb_castle/snd_amb_castle.wav",
+      "category": "ambience",
+      "duration_seconds": 8.0,
+      "loop": true,
+      "bpm": null,
+      "peak_dbfs": -9.37,
+      "rms_dbfs": -23.46,
+      "description": "Quiet original castle environment bed."
+    },
+    {
+      "name": "snd_amb_ghostcity",
+      "resource_path": "sounds/snd_amb_ghostcity/snd_amb_ghostcity.yy",
+      "wave_path": "sounds/snd_amb_ghostcity/snd_amb_ghostcity.wav",
+      "category": "ambience",
+      "duration_seconds": 8.0,
+      "loop": true,
+      "bpm": null,
+      "peak_dbfs": -9.37,
+      "rms_dbfs": -23.43,
+      "description": "Quiet original ghostcity environment bed."
+    },
+    {
+      "name": "snd_amb_port",
+      "resource_path": "sounds/snd_amb_port/snd_amb_port.yy",
+      "wave_path": "sounds/snd_amb_port/snd_amb_port.wav",
+      "category": "ambience",
+      "duration_seconds": 8.0,
+      "loop": true,
+      "bpm": null,
+      "peak_dbfs": -9.37,
+      "rms_dbfs": -25.25,
+      "description": "Quiet original port environment bed."
+    }
+  ],
+  "recommended_master_gain": 0.78,
+  "recommended_effect_gain": 0.36
+}

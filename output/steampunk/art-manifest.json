@@ -1,0 +1,51 @@
+{
+  "date": "2026-10-08",
+  "provenance": "User references and ImageGen generated PNGs, imported byte for byte",
+  "assets": [
+    {
+      "path": "output/steampunk/attack.png",
+      "bytes": 517090,
+      "sha256": "52208a155ce8b24d8869533e443ec0b1840afa31f3535901254f8734cf164195"
+    },
+    {
+      "path": "output/steampunk/defense.png",
+      "bytes": 630544,
+      "sha256": "331a56ff0560c9c93e9d561a05e91eb031831b2458d830719044bd8e69d059b9"
+    },
+    {
+      "path": "output/steampunk/foundry.png",
+      "bytes": 2948648,
+      "sha256": "c0635ac64b744b0587994eb978bcc0af7eae5b98082bc5af2a00966225558a39"
+    },
+    {
+      "path": "output/steampunk/Steampunk0-reference.png",
+      "bytes": 13448,
+      "sha256": "5c3726c7943894b94ad6d81d1abc2344172cf9cfcc17bbe9095a25cc700ef3dd"
+    },
+    {
+      "path": "output/steampunk/talk.png",
+      "bytes": 598855,
+      "sha256": "c5f2888880bbb7996564d4ecbf731db803959e61b7a4adcca6b73e5267adb3b5"
+    },
+    {
+      "path": "output/city-flags/Comunista0-reference.png",
+      "bytes": 12699,
+      "sha256": "6dc0f314866e338ac817673a29cfc79f842ebf0af42c7d33630701222ee18575"
+    },
+    {
+      "path": "output/city-flags/resolve.png",
+      "bytes": 1339940,
+      "sha256": "d45e7218f2e1b09c20fe015cecc861cb797693f58a25c1fc2ff90e82dc09a23d"
+    },
+    {
+      "path": "output/city-flags/salute.png",
+      "bytes": 1338638,
+      "sha256": "a4caf43225c3137cdf589d8b38e5052f920b07f312e51c3188c6b2a5d14eb7d3"
+    },
+    {
+      "path": "output/city-flags/speech.png",
+      "bytes": 1349777,
+      "sha256": "863ad28ab973b71f2fa318608dbe630cd5559a79a8298b58954c25f59ad0c352"
+    }
+  ]
+}

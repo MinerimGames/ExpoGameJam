@@ -1,7 +1,6 @@
- if (keyboard_check_pressed(vk_f11))
-{
-    window_set_fullscreen(!window_get_fullscreen());
-}
+var _full = os_browser == browser_not_a_browser ? window_get_fullscreen() : menu_browser_fullscreen;
+menu_options[2] = _full ? "JANELA" : "TELA CHEIA";
+menu_update_web_button();
 
 if (show_controls)
 {
@@ -15,15 +14,18 @@ if (show_controls)
     }
 
     exit;
-} 
+}
 
 var _option_count = array_length(menu_options);
 
 if (
     keyboard_check_pressed(vk_up)
     || keyboard_check_pressed(ord("W"))
+    || keyboard_check_pressed(vk_left)
+    || keyboard_check_pressed(ord("A"))
 )
 {
+    som_efeito("select");
     menu_selected--;
 
     if (menu_selected < 0)
@@ -35,8 +37,11 @@ if (
 if (
     keyboard_check_pressed(vk_down)
     || keyboard_check_pressed(ord("S"))
+    || keyboard_check_pressed(vk_right)
+    || keyboard_check_pressed(ord("D"))
 )
 {
+    som_efeito("select");
     menu_selected++;
 
     if (menu_selected >= _option_count)
@@ -45,33 +50,12 @@ if (
     }
 }
 
-var _mouse_x = device_mouse_x_to_gui(0);
-var _mouse_y = device_mouse_y_to_gui(0);
+var _mouse_x = ui_mouse_x_to_gui(0);
+var _mouse_y = ui_mouse_y_to_gui(0);
 
-for (var i = 0; i < _option_count; i++)
-{
-    var _button_top = button_y + i * (button_height + button_gap);
-    var _button_bottom = _button_top + button_height;
-
-    if (
-        point_in_rectangle(
-            _mouse_x,
-            _mouse_y,
-            button_x,
-            _button_top,
-            button_x + button_width,
-            _button_bottom
-        )
-    )
-    {
-        menu_selected = i;
-
-        if (mouse_check_button_pressed(mb_left))
-        {
-            activate_option = true;
-        }
-    }
-}
+var _mouse_moved=point_distance(_mouse_x,_mouse_y,menu_mouse_x,menu_mouse_y)>0.5;
+menu_mouse_x=_mouse_x;menu_mouse_y=_mouse_y;
+menu_hover(_mouse_x,_mouse_y,mouse_check_button_pressed(mb_left),_mouse_moved);
 
 if (
     keyboard_check_pressed(vk_enter)
@@ -83,11 +67,14 @@ if (
 
 if (activate_option)
 {
+    som_efeito("select");
     activate_option = false;
 
     switch (menu_selected)
     {
         case 0:
+            matematica_progresso(true);
+            historia_newton_progresso(true);
             room_goto(rm_tutorial);
             break;
 
@@ -96,6 +83,11 @@ if (activate_option)
             break;
 
         case 2:
+            if (os_browser == browser_not_a_browser)
+                window_set_fullscreen(!window_get_fullscreen());
+            break;
+
+        case 3:
             game_end();
             break;
     }

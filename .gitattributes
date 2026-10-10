@@ -1,6 +1,18 @@
+# Normalize source text while keeping images, audio and vendor licenses intact.
+* text=auto eol=lf
+*.png -text
+*.jpg -text
+*.jpeg -text
+*.wav -text
+*.ogg -text
+*.mp3 -text
+*.mpeg -text
+audio_sources/kenney-impact/LICENSE-Kenney.txt -text -diff
+fonts/**/LICENSE-*.txt -text -diff
+
 # Ignore .yy files for language statistics
 *.yy linguist-generated=true
- 
+
 # force LF for metadata files for merge simplicity
 *.gml text eol=lf
 *.yy text eol=lf

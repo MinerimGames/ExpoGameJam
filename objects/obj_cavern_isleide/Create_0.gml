@@ -18,9 +18,13 @@ dialogue_pages = [
 ];
 
 battle_name = "Isleide das Cavernas";
-battle_hp = 75;
+battle_victory_room = rm_vila;
+battle_victory_portal_x = 576;
+battle_victory_portal_y = 156;
+var _battle_config = batalha_configuracao();
+battle_hp = _battle_config.boss_hp;
 battle_math_phase = 1;
 battle_math_phase_max = 1;
 battle_sprite = spr_isleide_cavernas;
 battle_blend = c_white;
-battle_scale = 0.45;
+battle_scale = 232/(sprite_get_bbox_bottom(battle_sprite)-sprite_get_bbox_top(battle_sprite)+1);

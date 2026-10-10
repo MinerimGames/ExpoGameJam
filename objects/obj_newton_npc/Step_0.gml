@@ -14,10 +14,22 @@ var _player = instance_find(obj_player, 0);
 var _near = point_distance(x, y, _player.x, _player.y) <= interaction_distance;
 var _advance = keyboard_check_pressed(ord("E"))
     || keyboard_check_pressed(vk_space);
+var _mx = (ui_mouse_x_to_gui(0) - npc_ui_offset_x) / npc_ui_scale;
+var _my = (ui_mouse_y_to_gui(0) - npc_ui_offset_y) / npc_ui_scale;
+var _skip = keyboard_check_pressed(ord("P"))
+    || (mouse_check_button_pressed(mb_left)
+        && _mx >= 675 && _mx <= 875
+        && _my >= 300 && _my <= 342);
 
 if (dialogue_active)
 {
     npc_lock_player(true);
+
+    if (dialogue_mode == "intro" && _skip)
+    {
+        skip_tutorial();
+        exit;
+    }
 
     if (_advance)
     {
@@ -41,18 +53,9 @@ if (dialogue_active)
             {
                 npc_lock_player(false);
 
-                if (dialogue_mode == "post" && !portal_created)
+                if (dialogue_mode == "post")
                 {
-                    portal_created = true;
-
-                    var _portal = instance_create_layer(
-                        x + 36,
-                        y + 12,
-                        "enemies",
-                        obj_portal
-                    );
-
-                    _portal.depth = depth + 1;
+                    create_post_portal();
                 }
             }
         }
