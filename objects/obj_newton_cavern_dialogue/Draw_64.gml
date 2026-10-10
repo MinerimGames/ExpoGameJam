@@ -22,7 +22,7 @@ draw_set_font(fnt_ui);
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);
 draw_set_color(_purple);
-draw_text_transformed(_ox + 125 * _scale, _oy + 370 * _scale, "TRANSMISSÃO — ISLEIDE NEWTON", 1.0 * _scale, 1.0 * _scale, 0);
+draw_text_transformed(_ox + 125 * _scale, _oy + 370 * _scale, "TRANSMISSÃO - ISLEIDE NEWTON", 1.0 * _scale, 1.0 * _scale, 0);
 draw_set_color(_yellow);
 draw_rectangle(_ox + 125 * _scale, _oy + 397 * _scale, _ox + 835 * _scale, _oy + 401 * _scale, false);
 

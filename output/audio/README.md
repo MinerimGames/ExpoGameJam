@@ -1,0 +1,7 @@
+# Audio for Paradoxo de Wilson
+
+Music, ambience and combat cues are original procedural compositions dedicated to the public domain under CC0-1.0. The ten footsteps now use Kenney Impact Sounds foley, also CC0-1.0: https://kenney.nl/assets/impact-sounds. Unmodified source clips and the supplied license are preserved in `audio_sources/kenney-impact`. Run `python tools/generate_game_audio.py --footsteps-only` to refresh only the walking sounds, preserving the existing score, ambience and combat cues.
+
+Music is stereo; effects, footsteps and ambience are mono. Every file is 44.1 kHz PCM16 with headroom and tapered edges. The three 16-bar scores and five ambience beds loop; the 10-second ending score plays once. Delay tails in the scores wrap into the next phrase. `manifest.json` includes resource registration entries, exact duration, BPM, measured peak/RMS level and descriptions.
+
+Current playback: master gain 0.78, music 0.32, ambience 0.16, combat effects 0.36 and footsteps 0.38 before the master multiplier. Footsteps retain their original pitch, are downmixed to mono, trimmed only around quiet tails, and normalized with headroom. Emit them only after actual movement, respecting the existing cadence, walls and dialogue/battle locks. Fade music and ambience when changing context; restore exploration after combat. `manifest.json` records the exact source SHA-256, source URL and license for every footstep.

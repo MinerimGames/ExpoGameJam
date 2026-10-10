@@ -8,7 +8,10 @@
   "managed":true,
   "name":"obj_cavern_exit_right",
   "overriddenProperties":[],
-  "parent":{"name":"Objects","path":"folders/Objects.yy",},
+  "parent":{
+    "name":"Objects",
+    "path":"folders/Objects.yy",
+  },
   "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,

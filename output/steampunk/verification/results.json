@@ -1,0 +1,111 @@
+{
+  "date": "2026-10-08",
+  "native": [
+    {
+      "suite": "Steampunk",
+      "checks": 436,
+      "log": "C:\\Users\\jrhre\\AppData\\Local\\Temp\\paradoxo-evento-tests\\FatecEpilogue-20261007\\run-20261008-023959\\Steampunk\\runner.log",
+      "failures": 0
+    },
+    {
+      "suite": "Progression",
+      "checks": 1471,
+      "log": "C:\\Users\\jrhre\\AppData\\Local\\Temp\\paradoxo-evento-tests\\FatecEpilogue-20261007\\run-20261008-022848\\Progression\\runner.log",
+      "failures": 0
+    },
+    {
+      "suite": "Credits",
+      "checks": 52,
+      "log": "C:\\Users\\jrhre\\AppData\\Local\\Temp\\paradoxo-evento-tests\\FatecEpilogue-20261007\\run-20261008-022906\\Credits\\runner.log",
+      "failures": 0
+    },
+    {
+      "suite": "Epilogue",
+      "checks": 1590,
+      "log": "C:\\Users\\jrhre\\AppData\\Local\\Temp\\paradoxo-evento-tests\\FatecEpilogue-20261007\\run-20261008-022921\\Epilogue\\runner.log",
+      "failures": 0
+    },
+    {
+      "suite": "City",
+      "checks": 338,
+      "log": "C:\\Users\\jrhre\\AppData\\Local\\Temp\\paradoxo-evento-tests\\FatecEpilogue-20261007\\run-20261008-022955\\City\\runner.log",
+      "failures": 0
+    },
+    {
+      "suite": "CityFlags",
+      "checks": 9,
+      "log": "C:\\Users\\jrhre\\AppData\\Local\\Temp\\paradoxo-evento-tests\\FatecEpilogue-20261007\\run-20261008-023926\\CityFlags\\runner.log",
+      "failures": 0
+    },
+    {
+      "suite": "EvilNewton",
+      "checks": 46,
+      "log": "C:\\Users\\jrhre\\AppData\\Local\\Temp\\paradoxo-evento-tests\\FatecEpilogue-20261007\\run-20261008-023023\\EvilNewton\\runner.log",
+      "failures": 0
+    },
+    {
+      "suite": "Newton",
+      "checks": 1354,
+      "log": "C:\\Users\\jrhre\\AppData\\Local\\Temp\\paradoxo-evento-tests\\FatecEpilogue-20261007\\run-20261008-023040\\Newton\\runner.log",
+      "failures": 0
+    },
+    {
+      "suite": "Audio",
+      "checks": 55,
+      "log": "C:\\Users\\jrhre\\AppData\\Local\\Temp\\paradoxo-evento-tests\\FatecEpilogue-20261007\\run-20261008-023120\\Audio\\runner.log",
+      "failures": 0
+    },
+    {
+      "suite": "Royal",
+      "checks": 285,
+      "log": "C:\\Users\\jrhre\\AppData\\Local\\Temp\\paradoxo-evento-tests\\FatecEpilogue-20261007\\run-20261008-023610\\Royal\\runner.log",
+      "failures": 0
+    },
+    {
+      "suite": "Skip",
+      "checks": 64,
+      "log": "C:\\Users\\jrhre\\AppData\\Local\\Temp\\paradoxo-evento-tests\\FatecEpilogue-20261007\\run-20261008-023633\\Skip\\runner.log",
+      "failures": 0
+    },
+    {
+      "suite": "Route",
+      "checks": 111,
+      "log": "C:\\Users\\jrhre\\AppData\\Local\\Temp\\paradoxo-evento-tests\\FatecEpilogue-20261007\\run-20261008-023657\\Route\\runner.log",
+      "failures": 0
+    },
+    {
+      "suite": "Integration",
+      "checks": 132,
+      "log": "C:\\Users\\jrhre\\AppData\\Local\\Temp\\paradoxo-evento-tests\\FatecEpilogue-20261007\\run-20261008-023730\\Integration\\runner.log",
+      "failures": 0
+    },
+    {
+      "suite": "CombatMotion",
+      "checks": 26,
+      "log": "C:\\Users\\jrhre\\AppData\\Local\\Temp\\paradoxo-evento-tests\\FatecEpilogue-20261007\\run-20261008-023802\\CombatMotion\\runner.log",
+      "failures": 0
+    },
+    {
+      "suite": "Scenery",
+      "checks": 17,
+      "log": "C:\\Users\\jrhre\\AppData\\Local\\Temp\\paradoxo-evento-tests\\FatecEpilogue-20261007\\run-20261008-023824\\Scenery\\runner.log",
+      "failures": 0
+    },
+    {
+      "suite": "MapSafety",
+      "checks": 119,
+      "log": "C:\\Users\\jrhre\\AppData\\Local\\Temp\\paradoxo-evento-tests\\FatecEpilogue-20261007\\run-20261008-023851\\MapSafety\\runner.log",
+      "failures": 0
+    }
+  ],
+  "native_checks": 6105,
+  "python": {
+    "unittest_discovery": 18,
+    "world_collision_geometry": 6,
+    "port_collision_geometry": 5,
+    "native_foreground_pixels": 3,
+    "failures": 0
+  },
+  "resources_registered": 192,
+  "review": "No flow blockers; fixed unsupported dash in foundry exit hint."
+}

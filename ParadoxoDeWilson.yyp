@@ -1,0 +1,1599 @@
+{
+  "$GMProject": "v1",
+  "%Name": "ParadoxoDeWilson",
+  "AudioGroups": [
+    {
+      "$GMAudioGroup": "v1",
+      "%Name": "audiogroup_default",
+      "exportDir": "",
+      "name": "audiogroup_default",
+      "resourceType": "GMAudioGroup",
+      "resourceVersion": "2.0",
+      "targets": -1
+    }
+  ],
+  "configs": {
+    "children": [
+      {
+        "children": [],
+        "name": "FinalRelease"
+      }
+    ],
+    "name": "Default"
+  },
+  "defaultScriptType": 1,
+  "Folders": [
+    {
+      "$GMFolder": "",
+      "%Name": "Fonts",
+      "folderPath": "folders/Fonts.yy",
+      "name": "Fonts",
+      "resourceType": "GMFolder",
+      "resourceVersion": "2.0"
+    },
+    {
+      "$GMFolder": "",
+      "%Name": "Objects",
+      "folderPath": "folders/Objects.yy",
+      "name": "Objects",
+      "resourceType": "GMFolder",
+      "resourceVersion": "2.0"
+    },
+    {
+      "$GMFolder": "",
+      "%Name": "Rooms",
+      "folderPath": "folders/Rooms.yy",
+      "name": "Rooms",
+      "resourceType": "GMFolder",
+      "resourceVersion": "2.0"
+    },
+    {
+      "$GMFolder": "",
+      "%Name": "Scripts",
+      "folderPath": "folders/Scripts.yy",
+      "name": "Scripts",
+      "resourceType": "GMFolder",
+      "resourceVersion": "2.0"
+    },
+    {
+      "$GMFolder": "",
+      "%Name": "Sprites",
+      "folderPath": "folders/Sprites.yy",
+      "name": "Sprites",
+      "resourceType": "GMFolder",
+      "resourceVersion": "2.0"
+    },
+    {
+      "$GMFolder": "",
+      "%Name": "Battle",
+      "folderPath": "folders/Sprites/Battle.yy",
+      "name": "Battle",
+      "resourceType": "GMFolder",
+      "resourceVersion": "2.0"
+    },
+    {
+      "$GMFolder": "",
+      "%Name": "Level",
+      "folderPath": "folders/Sprites/Level.yy",
+      "name": "Level",
+      "resourceType": "GMFolder",
+      "resourceVersion": "2.0"
+    },
+    {
+      "$GMFolder": "",
+      "%Name": "NPC",
+      "folderPath": "folders/Sprites/NPC.yy",
+      "name": "NPC",
+      "resourceType": "GMFolder",
+      "resourceVersion": "2.0"
+    },
+    {
+      "$GMFolder": "",
+      "%Name": "Player",
+      "folderPath": "folders/Sprites/Player.yy",
+      "name": "Player",
+      "resourceType": "GMFolder",
+      "resourceVersion": "2.0"
+    },
+    {
+      "$GMFolder": "",
+      "%Name": "Idle",
+      "folderPath": "folders/Sprites/Player/Idle.yy",
+      "name": "Idle",
+      "resourceType": "GMFolder",
+      "resourceVersion": "2.0"
+    },
+    {
+      "$GMFolder": "",
+      "%Name": "Walk",
+      "folderPath": "folders/Sprites/Player/Walk.yy",
+      "name": "Walk",
+      "resourceType": "GMFolder",
+      "resourceVersion": "2.0"
+    },
+    {
+      "$GMFolder": "",
+      "%Name": "Tiles",
+      "folderPath": "folders/Sprites/Tiles.yy",
+      "name": "Tiles",
+      "resourceType": "GMFolder",
+      "resourceVersion": "2.0"
+    },
+    {
+      "$GMFolder": "",
+      "%Name": "spr_tiles_medieval",
+      "folderPath": "folders/Sprites/Tiles/spr_tiles_medieval.yy",
+      "name": "spr_tiles_medieval",
+      "resourceType": "GMFolder",
+      "resourceVersion": "2.0"
+    },
+    {
+      "$GMFolder": "",
+      "%Name": "Tile Sets",
+      "folderPath": "folders/Tile Sets.yy",
+      "name": "Tile Sets",
+      "resourceType": "GMFolder",
+      "resourceVersion": "2.0"
+    },
+    {
+      "$GMFolder": "",
+      "%Name": "tl_medieval",
+      "folderPath": "folders/Tile Sets/tl_medieval.yy",
+      "name": "tl_medieval",
+      "resourceType": "GMFolder",
+      "resourceVersion": "2.0"
+    },
+    {
+      "$GMFolder": "",
+      "%Name": "Sounds",
+      "folderPath": "folders/Sounds.yy",
+      "name": "Sounds",
+      "resourceType": "GMFolder",
+      "resourceVersion": "2.0"
+    }
+  ],
+  "ForcedPrefabProjectReferences": [
+    {
+      "link": "io.gamemaker.sdfshaders-1.0.0",
+      "name": "io.gamemaker.sdfshaders-1.0.0",
+      "path": "io.gamemaker.sdfshaders-1.0.0.yyp"
+    }
+  ],
+  "IncludedFiles": [],
+  "isEcma": false,
+  "LibraryEmitters": [],
+  "MetaData": {
+    "IDEVersion": "2026.0.0.16"
+  },
+  "name": "ParadoxoDeWilson",
+  "resources": [
+    {
+      "id": {
+        "name": "shd_peasant_cutout",
+        "path": "shaders/shd_peasant_cutout/shd_peasant_cutout.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "fnt_title",
+        "path": "fonts/fnt_title/fnt_title.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "fnt_ui",
+        "path": "fonts/fnt_ui/fnt_ui.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "obj_ambient_controller",
+        "path": "objects/obj_ambient_controller/obj_ambient_controller.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "obj_battle_controller",
+        "path": "objects/obj_battle_controller/obj_battle_controller.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "obj_cavern_exit_right",
+        "path": "objects/obj_cavern_exit_right/obj_cavern_exit_right.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "obj_cavern_isleide",
+        "path": "objects/obj_cavern_isleide/obj_cavern_isleide.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "obj_colisor",
+        "path": "objects/obj_colisor/obj_colisor.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "obj_demo_end",
+        "path": "objects/obj_demo_end/obj_demo_end.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "obj_main_menu",
+        "path": "objects/obj_main_menu/obj_main_menu.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "obj_newton_cavern_dialogue",
+        "path": "objects/obj_newton_cavern_dialogue/obj_newton_cavern_dialogue.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "obj_newton_npc",
+        "path": "objects/obj_newton_npc/obj_newton_npc.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "obj_player",
+        "path": "objects/obj_player/obj_player.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "obj_portal",
+        "path": "objects/obj_portal/obj_portal.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "rm_bosque",
+        "path": "rooms/rm_bosque/rm_bosque.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "rm_castelo",
+        "path": "rooms/rm_castelo/rm_castelo.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "rm_cavernas_2",
+        "path": "rooms/rm_cavernas_2/rm_cavernas_2.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "rm_cavernas",
+        "path": "rooms/rm_cavernas/rm_cavernas.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "rm_demo_end",
+        "path": "rooms/rm_demo_end/rm_demo_end.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "rm_menu",
+        "path": "rooms/rm_menu/rm_menu.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "rm_tutorial",
+        "path": "rooms/rm_tutorial/rm_tutorial.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "rm_vila",
+        "path": "rooms/rm_vila/rm_vila.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "battle_system",
+        "path": "scripts/battle_system/battle_system.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "state_machine",
+        "path": "scripts/state_machine/state_machine.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_battle_isleide",
+        "path": "sprites/spr_battle_isleide/spr_battle_isleide.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_battle_newton",
+        "path": "sprites/spr_battle_newton/spr_battle_newton.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_castelo_backgorund",
+        "path": "sprites/spr_castelo_backgorund/spr_castelo_backgorund.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_colisor",
+        "path": "sprites/spr_colisor/spr_colisor.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_grasstiles",
+        "path": "sprites/spr_grasstiles/spr_grasstiles.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_isleide_cavernas",
+        "path": "sprites/spr_isleide_cavernas/spr_isleide_cavernas.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_medieval_background",
+        "path": "sprites/spr_medieval_background/spr_medieval_background.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_menu_background",
+        "path": "sprites/spr_menu_background/spr_menu_background.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_player_idle_back",
+        "path": "sprites/spr_player_idle_back/spr_player_idle_back.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_player_idle_front",
+        "path": "sprites/spr_player_idle_front/spr_player_idle_front.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_player_idle_side",
+        "path": "sprites/spr_player_idle_side/spr_player_idle_side.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_player_walk_back",
+        "path": "sprites/spr_player_walk_back/spr_player_walk_back.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_player_walk_front",
+        "path": "sprites/spr_player_walk_front/spr_player_walk_front.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_player_walk_side",
+        "path": "sprites/spr_player_walk_side/spr_player_walk_side.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_portal",
+        "path": "sprites/spr_portal/spr_portal.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_tiles_acampamento",
+        "path": "sprites/spr_tiles_acampamento/spr_tiles_acampamento.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_tiles_agua",
+        "path": "sprites/spr_tiles_agua/spr_tiles_agua.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_tiles_arvore_editado",
+        "path": "sprites/spr_tiles_arvore_editado/spr_tiles_arvore_editado.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_tiles_arvores",
+        "path": "sprites/spr_tiles_arvores/spr_tiles_arvores.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_tiles_casas",
+        "path": "sprites/spr_tiles_casas/spr_tiles_casas.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_tiles_cavernas01",
+        "path": "sprites/spr_tiles_cavernas01/spr_tiles_cavernas01.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_tiles_cavernas02",
+        "path": "sprites/spr_tiles_cavernas02/spr_tiles_cavernas02.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_tiles_cavernas03",
+        "path": "sprites/spr_tiles_cavernas03/spr_tiles_cavernas03.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_tiles_cavernas04",
+        "path": "sprites/spr_tiles_cavernas04/spr_tiles_cavernas04.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_tiles_cavernas05",
+        "path": "sprites/spr_tiles_cavernas05/spr_tiles_cavernas05.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_tiles_cavernas06",
+        "path": "sprites/spr_tiles_cavernas06/spr_tiles_cavernas06.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_tiles_cavernas07",
+        "path": "sprites/spr_tiles_cavernas07/spr_tiles_cavernas07.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_tiles_chao",
+        "path": "sprites/spr_tiles_chao/spr_tiles_chao.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_tiles_desnivel",
+        "path": "sprites/spr_tiles_desnivel/spr_tiles_desnivel.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_tiles_estrada",
+        "path": "sprites/spr_tiles_estrada/spr_tiles_estrada.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_tiles_margens_rio",
+        "path": "sprites/spr_tiles_margens_rio/spr_tiles_margens_rio.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_tiles_pedras",
+        "path": "sprites/spr_tiles_pedras/spr_tiles_pedras.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_tiles_props",
+        "path": "sprites/spr_tiles_props/spr_tiles_props.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "tl_acampamento",
+        "path": "tilesets/tl_acampamento/tl_acampamento.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "tl_agua",
+        "path": "tilesets/tl_agua/tl_agua.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "tl_arvores",
+        "path": "tilesets/tl_arvores/tl_arvores.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "tl_casas",
+        "path": "tilesets/tl_casas/tl_casas.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "tl_cavernas01",
+        "path": "tilesets/tl_cavernas01/tl_cavernas01.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "tl_cavernas02",
+        "path": "tilesets/tl_cavernas02/tl_cavernas02.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "tl_cavernas03",
+        "path": "tilesets/tl_cavernas03/tl_cavernas03.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "tl_cavernas04",
+        "path": "tilesets/tl_cavernas04/tl_cavernas04.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "tl_cavernas05",
+        "path": "tilesets/tl_cavernas05/tl_cavernas05.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "tl_cavernas06",
+        "path": "tilesets/tl_cavernas06/tl_cavernas06.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "tl_cavernas07",
+        "path": "tilesets/tl_cavernas07/tl_cavernas07.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "tl_chao",
+        "path": "tilesets/tl_chao/tl_chao.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "tl_desnivel",
+        "path": "tilesets/tl_desnivel/tl_desnivel.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "tl_estrada",
+        "path": "tilesets/tl_estrada/tl_estrada.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "tl_grasslands",
+        "path": "tilesets/tl_grasslands/tl_grasslands.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "tl_margens_rio",
+        "path": "tilesets/tl_margens_rio/tl_margens_rio.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "tl_pedras",
+        "path": "tilesets/tl_pedras/tl_pedras.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "tl_props",
+        "path": "tilesets/tl_props/tl_props.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "tl_tree_emerald2",
+        "path": "tilesets/tl_tree_emerald2/tl_tree_emerald2.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_castle_guard",
+        "path": "sprites/spr_castle_guard/spr_castle_guard.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "obj_castle_guard",
+        "path": "objects/obj_castle_guard/obj_castle_guard.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_king_standing",
+        "path": "sprites/spr_king_standing/spr_king_standing.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_king_seated",
+        "path": "sprites/spr_king_seated/spr_king_seated.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_castle_hall",
+        "path": "sprites/spr_castle_hall/spr_castle_hall.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_throne_room",
+        "path": "sprites/spr_throne_room/spr_throne_room.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "obj_castle_interior",
+        "path": "objects/obj_castle_interior/obj_castle_interior.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "obj_isleide_king",
+        "path": "objects/obj_isleide_king/obj_isleide_king.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "rm_castle_hall",
+        "path": "rooms/rm_castle_hall/rm_castle_hall.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "rm_throne_room",
+        "path": "rooms/rm_throne_room/rm_throne_room.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_autumn_city",
+        "path": "sprites/spr_autumn_city/spr_autumn_city.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_autumn_plaza",
+        "path": "sprites/spr_autumn_plaza/spr_autumn_plaza.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "obj_autumn_scene",
+        "path": "objects/obj_autumn_scene/obj_autumn_scene.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "rm_autumn_gate",
+        "path": "rooms/rm_autumn_gate/rm_autumn_gate.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "rm_autumn_streets",
+        "path": "rooms/rm_autumn_streets/rm_autumn_streets.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "rm_autumn_plaza",
+        "path": "rooms/rm_autumn_plaza/rm_autumn_plaza.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_castle_peasant_1",
+        "path": "sprites/spr_castle_peasant_1/spr_castle_peasant_1.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_castle_peasant_2",
+        "path": "sprites/spr_castle_peasant_2/spr_castle_peasant_2.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_castle_peasant_3",
+        "path": "sprites/spr_castle_peasant_3/spr_castle_peasant_3.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_castle_peasant_4",
+        "path": "sprites/spr_castle_peasant_4/spr_castle_peasant_4.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_castle_peasant_5",
+        "path": "sprites/spr_castle_peasant_5/spr_castle_peasant_5.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_castle_peasant_6",
+        "path": "sprites/spr_castle_peasant_6/spr_castle_peasant_6.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "obj_castle_peasant",
+        "path": "objects/obj_castle_peasant/obj_castle_peasant.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "obj_castle_population",
+        "path": "objects/obj_castle_population/obj_castle_population.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "castle_peasants",
+        "path": "scripts/castle_peasants/castle_peasants.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_city_peace",
+        "path": "sprites/spr_city_peace/spr_city_peace.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "obj_isleide_city",
+        "path": "objects/obj_isleide_city/obj_isleide_city.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_city_talk",
+        "path": "sprites/spr_city_talk/spr_city_talk.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_city_defense",
+        "path": "sprites/spr_city_defense/spr_city_defense.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_city_attack",
+        "path": "sprites/spr_city_attack/spr_city_attack.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_wilson_idle_front",
+        "path": "sprites/spr_wilson_idle_front/spr_wilson_idle_front.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_wilson_idle_back",
+        "path": "sprites/spr_wilson_idle_back/spr_wilson_idle_back.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_wilson_idle_side",
+        "path": "sprites/spr_wilson_idle_side/spr_wilson_idle_side.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_wilson_walk_front_a",
+        "path": "sprites/spr_wilson_walk_front_a/spr_wilson_walk_front_a.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_wilson_walk_front_b",
+        "path": "sprites/spr_wilson_walk_front_b/spr_wilson_walk_front_b.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_wilson_walk_back_a",
+        "path": "sprites/spr_wilson_walk_back_a/spr_wilson_walk_back_a.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_wilson_walk_back_b",
+        "path": "sprites/spr_wilson_walk_back_b/spr_wilson_walk_back_b.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_wilson_walk_side_a",
+        "path": "sprites/spr_wilson_walk_side_a/spr_wilson_walk_side_a.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_wilson_walk_side_b",
+        "path": "sprites/spr_wilson_walk_side_b/spr_wilson_walk_side_b.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_wilson_attack",
+        "path": "sprites/spr_wilson_attack/spr_wilson_attack.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_wilson_defense",
+        "path": "sprites/spr_wilson_defense/spr_wilson_defense.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_wilson_heal",
+        "path": "sprites/spr_wilson_heal/spr_wilson_heal.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_wilson_dodge",
+        "path": "sprites/spr_wilson_dodge/spr_wilson_dodge.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_commercial_district",
+        "path": "sprites/spr_commercial_district/spr_commercial_district.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_capitalist_ally",
+        "path": "sprites/spr_capitalist_ally/spr_capitalist_ally.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "obj_commercial_scene",
+        "path": "objects/obj_commercial_scene/obj_commercial_scene.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "obj_capitalist_ally",
+        "path": "objects/obj_capitalist_ally/obj_capitalist_ally.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "newton_story",
+        "path": "scripts/newton_story/newton_story.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "rm_commercial_district",
+        "path": "rooms/rm_commercial_district/rm_commercial_district.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "obj_temporal_scene",
+        "path": "objects/obj_temporal_scene/obj_temporal_scene.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "obj_past_wilson",
+        "path": "objects/obj_past_wilson/obj_past_wilson.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "obj_newton_final",
+        "path": "objects/obj_newton_final/obj_newton_final.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "rm_temporal_origin",
+        "path": "rooms/rm_temporal_origin/rm_temporal_origin.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "newton_battle",
+        "path": "scripts/newton_battle/newton_battle.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "world_render",
+        "path": "scripts/world_render/world_render.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "obj_world_foreground",
+        "path": "objects/obj_world_foreground/obj_world_foreground.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "shd_wilson_walk",
+        "path": "shaders/shd_wilson_walk/shd_wilson_walk.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_wilson_walk_atlas",
+        "path": "sprites/spr_wilson_walk_atlas/spr_wilson_walk_atlas.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_wilson_side_walk",
+        "path": "sprites/spr_wilson_side_walk/spr_wilson_side_walk.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_newton_evil",
+        "path": "sprites/spr_newton_evil/spr_newton_evil.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "game_audio",
+        "path": "scripts/game_audio/game_audio.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "obj_game_audio",
+        "path": "objects/obj_game_audio/obj_game_audio.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "snd_music_exploration",
+        "path": "sounds/snd_music_exploration/snd_music_exploration.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "snd_music_battle",
+        "path": "sounds/snd_music_battle/snd_music_battle.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "snd_music_newton",
+        "path": "sounds/snd_music_newton/snd_music_newton.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "snd_music_ending",
+        "path": "sounds/snd_music_ending/snd_music_ending.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "snd_ui_select",
+        "path": "sounds/snd_ui_select/snd_ui_select.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "snd_correct",
+        "path": "sounds/snd_correct/snd_correct.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "snd_wrong",
+        "path": "sounds/snd_wrong/snd_wrong.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "snd_attack",
+        "path": "sounds/snd_attack/snd_attack.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "snd_defense",
+        "path": "sounds/snd_defense/snd_defense.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "snd_heal",
+        "path": "sounds/snd_heal/snd_heal.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "snd_dodge",
+        "path": "sounds/snd_dodge/snd_dodge.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "snd_portal",
+        "path": "sounds/snd_portal/snd_portal.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "snd_transformation",
+        "path": "sounds/snd_transformation/snd_transformation.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "snd_levelup",
+        "path": "sounds/snd_levelup/snd_levelup.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "snd_victory",
+        "path": "sounds/snd_victory/snd_victory.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "snd_defeat",
+        "path": "sounds/snd_defeat/snd_defeat.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "snd_step_grass",
+        "path": "sounds/snd_step_grass/snd_step_grass.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "snd_step_leaves",
+        "path": "sounds/snd_step_leaves/snd_step_leaves.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "snd_step_dirt",
+        "path": "sounds/snd_step_dirt/snd_step_dirt.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "snd_step_gravel",
+        "path": "sounds/snd_step_gravel/snd_step_gravel.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "snd_step_cave",
+        "path": "sounds/snd_step_cave/snd_step_cave.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "snd_step_stone",
+        "path": "sounds/snd_step_stone/snd_step_stone.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "snd_step_wood",
+        "path": "sounds/snd_step_wood/snd_step_wood.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "snd_step_marble",
+        "path": "sounds/snd_step_marble/snd_step_marble.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "snd_step_cobbles",
+        "path": "sounds/snd_step_cobbles/snd_step_cobbles.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "snd_step_dockwood",
+        "path": "sounds/snd_step_dockwood/snd_step_dockwood.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "snd_amb_forest",
+        "path": "sounds/snd_amb_forest/snd_amb_forest.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "snd_amb_cave",
+        "path": "sounds/snd_amb_cave/snd_amb_cave.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "snd_amb_castle",
+        "path": "sounds/snd_amb_castle/snd_amb_castle.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "snd_amb_ghostcity",
+        "path": "sounds/snd_amb_ghostcity/snd_amb_ghostcity.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "snd_amb_port",
+        "path": "sounds/snd_amb_port/snd_amb_port.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_menu_poster",
+        "path": "sprites/spr_menu_poster/spr_menu_poster.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "battle_motion",
+        "path": "scripts/battle_motion/battle_motion.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_fatec_classroom",
+        "path": "sprites/spr_fatec_classroom/spr_fatec_classroom.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_wilson_professor",
+        "path": "sprites/spr_wilson_professor/spr_wilson_professor.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "obj_fatec_ending",
+        "path": "objects/obj_fatec_ending/obj_fatec_ending.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "rm_fatec_classroom",
+        "path": "rooms/rm_fatec_classroom/rm_fatec_classroom.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_credit_cabeludo",
+        "path": "sprites/spr_credit_cabeludo/spr_credit_cabeludo.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_credit_adao",
+        "path": "sprites/spr_credit_adao/spr_credit_adao.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_credit_akatsuki",
+        "path": "sprites/spr_credit_akatsuki/spr_credit_akatsuki.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_credit_steampunk",
+        "path": "sprites/spr_credit_steampunk/spr_credit_steampunk.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "snd_newton_recording",
+        "path": "sounds/snd_newton_recording/snd_newton_recording.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_credit_yandere",
+        "path": "sprites/spr_credit_yandere/spr_credit_yandere.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_steampunk_idle",
+        "path": "sprites/spr_steampunk_idle/spr_steampunk_idle.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_steampunk_talk",
+        "path": "sprites/spr_steampunk_talk/spr_steampunk_talk.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_steampunk_attack",
+        "path": "sprites/spr_steampunk_attack/spr_steampunk_attack.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_steampunk_defense",
+        "path": "sprites/spr_steampunk_defense/spr_steampunk_defense.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_city_flag_salute",
+        "path": "sprites/spr_city_flag_salute/spr_city_flag_salute.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_city_flag_speech",
+        "path": "sprites/spr_city_flag_speech/spr_city_flag_speech.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_city_flag_resolve",
+        "path": "sprites/spr_city_flag_resolve/spr_city_flag_resolve.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_steampunk_foundry",
+        "path": "sprites/spr_steampunk_foundry/spr_steampunk_foundry.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "obj_steampunk_scene",
+        "path": "objects/obj_steampunk_scene/obj_steampunk_scene.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "obj_isleide_steampunk",
+        "path": "objects/obj_isleide_steampunk/obj_isleide_steampunk.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "rm_steampunk_foundry",
+        "path": "rooms/rm_steampunk_foundry/rm_steampunk_foundry.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "gmcallback_menu_fullscreen",
+        "path": "scripts/gmcallback_menu_fullscreen/gmcallback_menu_fullscreen.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_menu_fullscreen_hitbox",
+        "path": "sprites/spr_menu_fullscreen_hitbox/spr_menu_fullscreen_hitbox.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_fatec_student_01",
+        "path": "sprites/spr_fatec_student_01/spr_fatec_student_01.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_fatec_student_02",
+        "path": "sprites/spr_fatec_student_02/spr_fatec_student_02.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_fatec_student_03",
+        "path": "sprites/spr_fatec_student_03/spr_fatec_student_03.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_fatec_student_04",
+        "path": "sprites/spr_fatec_student_04/spr_fatec_student_04.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "obj_fatec_student",
+        "path": "objects/obj_fatec_student/obj_fatec_student.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "shd_fatec_student",
+        "path": "shaders/shd_fatec_student/shd_fatec_student.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_secret_throne_01",
+        "path": "sprites/spr_secret_throne_01/spr_secret_throne_01.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_secret_throne_02",
+        "path": "sprites/spr_secret_throne_02/spr_secret_throne_02.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_secret_throne_03",
+        "path": "sprites/spr_secret_throne_03/spr_secret_throne_03.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_secret_throne_04",
+        "path": "sprites/spr_secret_throne_04/spr_secret_throne_04.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_secret_throne_05",
+        "path": "sprites/spr_secret_throne_05/spr_secret_throne_05.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "secret_throne",
+        "path": "scripts/secret_throne/secret_throne.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "classroom_showcase",
+        "path": "scripts/classroom_showcase/classroom_showcase.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_secret_mask_reveal",
+        "path": "sprites/spr_secret_mask_reveal/spr_secret_mask_reveal.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_secret_guardian_approach",
+        "path": "sprites/spr_secret_guardian_approach/spr_secret_guardian_approach.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_secret_path_approach",
+        "path": "sprites/spr_secret_path_approach/spr_secret_path_approach.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "fnt_ending_pixel",
+        "path": "fonts/fnt_ending_pixel/fnt_ending_pixel.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_final_cinematic",
+        "path": "sprites/spr_final_cinematic/spr_final_cinematic.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "shd_final_camera",
+        "path": "shaders/shd_final_camera/shd_final_camera.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_fatec_desk_guest",
+        "path": "sprites/spr_fatec_desk_guest/spr_fatec_desk_guest.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "obj_fatec_desk_guest",
+        "path": "objects/obj_fatec_desk_guest/obj_fatec_desk_guest.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "spr_fatec_desk_chair",
+        "path": "sprites/spr_fatec_desk_chair/spr_fatec_desk_chair.yy"
+      }
+    },
+    {
+      "id": {
+        "name": "snd_final_cinematic_music",
+        "path": "sounds/snd_final_cinematic_music/snd_final_cinematic_music.yy"
+      }
+    }
+  ],
+  "resourceType": "GMProject",
+  "resourceVersion": "2.0",
+  "RoomOrderNodes": [
+    {
+      "roomId": {
+        "name": "rm_menu",
+        "path": "rooms/rm_menu/rm_menu.yy"
+      }
+    },
+    {
+      "roomId": {
+        "name": "rm_tutorial",
+        "path": "rooms/rm_tutorial/rm_tutorial.yy"
+      }
+    },
+    {
+      "roomId": {
+        "name": "rm_cavernas",
+        "path": "rooms/rm_cavernas/rm_cavernas.yy"
+      }
+    },
+    {
+      "roomId": {
+        "name": "rm_cavernas_2",
+        "path": "rooms/rm_cavernas_2/rm_cavernas_2.yy"
+      }
+    },
+    {
+      "roomId": {
+        "name": "rm_vila",
+        "path": "rooms/rm_vila/rm_vila.yy"
+      }
+    },
+    {
+      "roomId": {
+        "name": "rm_bosque",
+        "path": "rooms/rm_bosque/rm_bosque.yy"
+      }
+    },
+    {
+      "roomId": {
+        "name": "rm_castelo",
+        "path": "rooms/rm_castelo/rm_castelo.yy"
+      }
+    },
+    {
+      "roomId": {
+        "name": "rm_castle_hall",
+        "path": "rooms/rm_castle_hall/rm_castle_hall.yy"
+      }
+    },
+    {
+      "roomId": {
+        "name": "rm_throne_room",
+        "path": "rooms/rm_throne_room/rm_throne_room.yy"
+      }
+    },
+    {
+      "roomId": {
+        "name": "rm_steampunk_foundry",
+        "path": "rooms/rm_steampunk_foundry/rm_steampunk_foundry.yy"
+      }
+    },
+    {
+      "roomId": {
+        "name": "rm_autumn_gate",
+        "path": "rooms/rm_autumn_gate/rm_autumn_gate.yy"
+      }
+    },
+    {
+      "roomId": {
+        "name": "rm_autumn_streets",
+        "path": "rooms/rm_autumn_streets/rm_autumn_streets.yy"
+      }
+    },
+    {
+      "roomId": {
+        "name": "rm_autumn_plaza",
+        "path": "rooms/rm_autumn_plaza/rm_autumn_plaza.yy"
+      }
+    },
+    {
+      "roomId": {
+        "name": "rm_commercial_district",
+        "path": "rooms/rm_commercial_district/rm_commercial_district.yy"
+      }
+    },
+    {
+      "roomId": {
+        "name": "rm_temporal_origin",
+        "path": "rooms/rm_temporal_origin/rm_temporal_origin.yy"
+      }
+    },
+    {
+      "roomId": {
+        "name": "rm_fatec_classroom",
+        "path": "rooms/rm_fatec_classroom/rm_fatec_classroom.yy"
+      }
+    },
+    {
+      "roomId": {
+        "name": "rm_demo_end",
+        "path": "rooms/rm_demo_end/rm_demo_end.yy"
+      }
+    }
+  ],
+  "templateType": "game",
+  "TextureGroups": [
+    {
+      "$GMTextureGroup": "",
+      "%Name": "Default",
+      "autocrop": true,
+      "border": 2,
+      "compressFormat": "bz2",
+      "customOptions": "",
+      "directory": "",
+      "groupParent": null,
+      "isScaled": true,
+      "loadType": "default",
+      "mipsToGenerate": 0,
+      "name": "Default",
+      "resourceType": "GMTextureGroup",
+      "resourceVersion": "2.0",
+      "targets": -1
+    }
+  ]
+}

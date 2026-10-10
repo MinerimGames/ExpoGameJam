@@ -1,0 +1,12 @@
+{
+  "provenance": "Music supplied by the user; separate from the original CC0 soundtrack.",
+  "source": "audio_sources\\final-cinematic\\user-supplied-original.mpeg",
+  "source_sha256": "bb33ae79f285af23a2b5122c4873f2da4cf015c37cf52de5874445948abbfa9f",
+  "resource_path": "sounds/snd_final_cinematic_music/snd_final_cinematic_music.yy",
+  "duration_seconds": 45.45,
+  "conversion": "Complete recording decoded to 44.1 kHz stereo PCM16; no cut or tempo change.",
+  "loop": true,
+  "trigger": "FINAL_SCREEN",
+  "stop": "end of CREDITS",
+  "gain": 0.26
+}

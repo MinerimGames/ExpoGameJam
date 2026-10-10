@@ -1,0 +1,13 @@
+{
+  "provenance": "Recording supplied by the user; separate from the original CC0 score.",
+  "source": "output\\audio\\newton-transform-original.mpeg",
+  "source_sha256": "61e74383960c079384183da95254a77403116f13e3d1f3daf4f84188b082d80e",
+  "resource_path": "sounds/snd_newton_recording/snd_newton_recording.yy",
+  "wave_path": "sounds\\snd_newton_recording\\snd_newton_recording.wav",
+  "duration_seconds": 181.89061224489797,
+  "sample_rate": 44100,
+  "channels": 2,
+  "conversion": "Complete MP3 recording decoded to PCM16; gain 0.90 to prevent clipping. No cut.",
+  "loop": false,
+  "trigger": "begin_transformation in final Newton confrontation"
+}

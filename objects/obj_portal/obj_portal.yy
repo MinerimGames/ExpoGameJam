@@ -37,4 +37,3 @@
   "spriteMaskId":null,
   "visible":true,
 }
-}

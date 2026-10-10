@@ -1,0 +1,234 @@
+{
+  "source": "C:\\Users\\jrhre\\Downloads\\Cenas para animar corrigido.zip",
+  "source_sha256": "54511cf64663d7eca77d29d71cd72008f0ca1d83eebd9be6ede2c1a8efaeb1fc",
+  "frames": [
+    {
+      "index": 0,
+      "folder": 1,
+      "number": 1,
+      "entry": "Cenas para animar corrigido/01/01_Caminho_Distante.png",
+      "size": [
+        1672,
+        941
+      ],
+      "frame": "a640cb5c-5575-4706-a3bb-bb9ee11c9e06",
+      "pixel_sha256": "a7e5f46b030dbc367ecfb943b70e50f295575ca5e6ad04c3a0d8e0002e728373"
+    },
+    {
+      "index": 1,
+      "folder": 1,
+      "number": 2,
+      "entry": "Cenas para animar corrigido/01/02_Aproximacao.png",
+      "size": [
+        1672,
+        941
+      ],
+      "frame": "0e9f7f2b-b798-4a84-a4bc-cbf9f24b448e",
+      "pixel_sha256": "6949e39ee51e3e8464a86fd16f91b59808306eefc927f87d776b5bc719c73aa2"
+    },
+    {
+      "index": 2,
+      "folder": 1,
+      "number": 3,
+      "entry": "Cenas para animar corrigido/01/03_Chegada_a_Plataforma.png",
+      "size": [
+        1672,
+        941
+      ],
+      "frame": "e1696dbb-4cee-4561-a4cc-48702bb7314e",
+      "pixel_sha256": "5bf5286cafb5d1fe49b6a940f5a7803bfba02623c5221c49709f639dbac7db11"
+    },
+    {
+      "index": 3,
+      "folder": 1,
+      "number": 4,
+      "entry": "Cenas para animar corrigido/01/04_Base_do_Trono.png",
+      "size": [
+        1671,
+        941
+      ],
+      "frame": "833b352e-d030-41d2-a351-be5796539b71",
+      "pixel_sha256": "b205c20a6d3d5c300b28fe22c347a95d5e4e595e776ec8c1da6c9842892d9dda"
+    },
+    {
+      "index": 4,
+      "folder": 1,
+      "number": 5,
+      "entry": "Cenas para animar corrigido/01/05_Guardiao_Sentado.png",
+      "size": [
+        1672,
+        941
+      ],
+      "frame": "231858f6-b3c4-4436-a1d0-e76d4fb37284",
+      "pixel_sha256": "eb01c6b54b6c63dd7f7bc4e916d811f1a41b65b5d808e8f55096b054a2cda165"
+    },
+    {
+      "index": 5,
+      "folder": 2,
+      "number": 1,
+      "entry": "Cenas para animar corrigido/02/01_Guardiao_Sentado.png",
+      "size": [
+        1600,
+        900
+      ],
+      "frame": "079810dc-acf1-44d7-8d82-d36126f1b411",
+      "pixel_sha256": "d4eaa1d7464b85c594b3e680a29d95763589ad2b1b863e1ec8bbc570b7fc7fa3"
+    },
+    {
+      "index": 6,
+      "folder": 2,
+      "number": 2,
+      "entry": "Cenas para animar corrigido/02/02_Guardiao_Levantando.png",
+      "size": [
+        1672,
+        941
+      ],
+      "frame": "609c49fc-3ae8-46b4-a86c-b804cf0daca0",
+      "pixel_sha256": "daec8194a4111dbff5f06b7c0f8291337278df4740a50d9e5e4d7918645b8b7a"
+    },
+    {
+      "index": 7,
+      "folder": 2,
+      "number": 3,
+      "entry": "Cenas para animar corrigido/02/03_Levantando.png",
+      "size": [
+        1672,
+        941
+      ],
+      "frame": "740d8657-3e99-4634-91f8-6f8bfec6d794",
+      "pixel_sha256": "09606793b9618587d43977529dd92b7ce498d95fd10f75f34c4f9f22f77bf65c"
+    },
+    {
+      "index": 8,
+      "folder": 2,
+      "number": 4,
+      "entry": "Cenas para animar corrigido/02/04_Primeiro_Passo.png",
+      "size": [
+        1672,
+        941
+      ],
+      "frame": "ed620e49-352c-4071-ac03-c216f3f2077d",
+      "pixel_sha256": "5201978ef21d7f75b06e36ca9b0c5f6e49aaad7bdfd41b3c00cc59d133d911b5"
+    },
+    {
+      "index": 9,
+      "folder": 2,
+      "number": 6,
+      "entry": "Cenas para animar corrigido/02/06_Terceiro_Passo.png",
+      "size": [
+        1672,
+        941
+      ],
+      "frame": "fc02f543-48b8-46cb-a2ca-4041d1d75bf4",
+      "pixel_sha256": "e5dd5f5fc79e114934ffe028ac22f980caacba3487440235581104b2c07654c3"
+    },
+    {
+      "index": 10,
+      "folder": 2,
+      "number": 7,
+      "entry": "Cenas para animar corrigido/02/07_Proximo_da_Camera.png",
+      "size": [
+        1672,
+        941
+      ],
+      "frame": "da342426-b21e-45b6-a610-7a8a38272838",
+      "pixel_sha256": "adf1734fd8d76f1ee3b9ca541325488579898286aaf93990b76ab91893b1419a"
+    },
+    {
+      "index": 11,
+      "folder": 2,
+      "number": 8,
+      "entry": "Cenas para animar corrigido/02/08_Levantando_a_Mao.png",
+      "size": [
+        1672,
+        941
+      ],
+      "frame": "c93fff4f-0088-4ed3-9dd9-c0c4fb23c7a2",
+      "pixel_sha256": "adcef0cc8b9a751e36ed761fc07a50b7b0585ec5f5edb3db6d8c46329d9c7782"
+    },
+    {
+      "index": 12,
+      "folder": 2,
+      "number": 9,
+      "entry": "Cenas para animar corrigido/02/09_Segurando_a_Mascara.png",
+      "size": [
+        1672,
+        941
+      ],
+      "frame": "64dac050-abf9-42d2-8200-63a9e6f0882f",
+      "pixel_sha256": "2830deada5c63035ef4a74c3da1a3020c0ba74fc27233e7f9f76e93ad8511572"
+    },
+    {
+      "index": 13,
+      "folder": 2,
+      "number": 10,
+      "entry": "Cenas para animar corrigido/02/10_Inicio_da_Remocao.png",
+      "size": [
+        1672,
+        941
+      ],
+      "frame": "b1d26f1c-6ce2-48b4-8446-61fa1a7140a2",
+      "pixel_sha256": "01171e8b523865adc4a8a41a461b2a5c893d46536355df2cf2f0a8d672c8d3e5"
+    },
+    {
+      "index": 14,
+      "folder": 3,
+      "number": 1,
+      "entry": "Cenas para animar corrigido/03/01_Inicio_da_Retirada.png",
+      "size": [
+        1672,
+        941
+      ],
+      "frame": "0b0f2eaf-e7ab-4c29-81e8-426b75072aa5",
+      "pixel_sha256": "20a47ab3f5aba30b7297c2f05c222560f15368ba5f8d6d107dc49fe3f347dc52"
+    },
+    {
+      "index": 15,
+      "folder": 3,
+      "number": 2,
+      "entry": "Cenas para animar corrigido/03/02_Revelacao_Parcial.png",
+      "size": [
+        1672,
+        941
+      ],
+      "frame": "9ca189ad-b720-4f27-b802-766c4dce76ef",
+      "pixel_sha256": "aedf09978ee2250fc4cbfe314be29a0ba19ef7057de1aa61af08b9080bf8dc0c"
+    },
+    {
+      "index": 16,
+      "folder": 3,
+      "number": 3,
+      "entry": "Cenas para animar corrigido/03/03_Rosto_Revelado.png",
+      "size": [
+        1672,
+        941
+      ],
+      "frame": "208980c5-d322-4a61-a3f7-e842745f35ae",
+      "pixel_sha256": "79a99738000bc26c4076452c2ca04a0d96992bb36564025e0c2e066f0583b2fc"
+    },
+    {
+      "index": 17,
+      "folder": 3,
+      "number": 4,
+      "entry": "Cenas para animar corrigido/03/04_Mascara_Afastada.png",
+      "size": [
+        1672,
+        941
+      ],
+      "frame": "4056b49a-0c7d-46f0-842b-ce14f11cad18",
+      "pixel_sha256": "697831839dc19714dfdb9ad0ae95f0cd2a6d13b0e7e7de58da83917353311f78"
+    },
+    {
+      "index": 18,
+      "folder": 3,
+      "number": 5,
+      "entry": "Cenas para animar corrigido/03/05_Mascara_Abaixada.png",
+      "size": [
+        1672,
+        941
+      ],
+      "frame": "51815ee9-af05-452d-b6c8-da8891407c66",
+      "pixel_sha256": "0e520bfe6d81834a30bc6893220a2c905e94243d35e5f023d19c191351ba575d"
+    }
+  ]
+}

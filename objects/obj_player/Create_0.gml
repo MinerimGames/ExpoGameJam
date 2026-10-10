@@ -1,26 +1,42 @@
+matematica_progresso();
 estado_idle = new estado();
 estado_walk = new estado();
 
-// Nos cenários amplos das cavernas, aumenta apenas a representação no mapa.
-// O tutorial e a tela de batalha mantêm suas escalas originais.
-visual_scale = (room == rm_cavernas || room == rm_cavernas_2) ? 2.0 : 1.0;
+visual_scale = 1;
 facing_sign = 1;
 ground_offset = 7;
+world_height = 28;
+walk_cycle = 0;
+walk_distance = 0;
+walk_travel = 0;
+world_frame = 0;
+idle_clock = 0;
+image_speed = 0;
 image_alpha = 1;
 
-// Os recortes de cenário (depth 0) não podem cobrir o corpo com pixels
-// esparsos. As colisões continuam delimitando os objetos sólidos.
 if (room == rm_cavernas || room == rm_cavernas_2)
     depth = -20;
 
-// A escala da instância fica fixa para que a máscara de colisão não cresça
-// dentro de pedras e plantas. O tamanho visual é aplicado apenas no Draw.
 image_xscale = 1;
 image_yscale = 1;
 
+update_player_art = function(_walking)
+{
+    facing_sign = dir == 2 ? -1 : 1;
+    if (!_walking)
+        sprite_index = define_sprite(dir, spr_wilson_idle_side, spr_wilson_idle_front, spr_wilson_idle_back);
+    else
+    {
+        var _second = (floor(walk_cycle) mod 2) == 1;
+        sprite_index = _second
+            ? define_sprite(dir, spr_wilson_walk_side_b, spr_wilson_walk_front_b, spr_wilson_walk_back_b)
+            : define_sprite(dir, spr_wilson_walk_side_a, spr_wilson_walk_front_a, spr_wilson_walk_back_a);
+    }
+    image_index = 0;
+};
+
 estado_idle.inicia = function(){
-	var _sprite = define_sprite(dir, spr_player_idle_side, spr_player_idle_front, spr_player_idle_back);
-	sprite_index = _sprite;
+    update_player_art(false);
 }
 estado_idle.roda = function()
 {
@@ -32,44 +48,30 @@ estado_idle.roda = function()
 
 estado_walk.inicia = function(){
 	dir = (point_direction(0, 0, right - left, down - up) div 90);
-	sprite_index = define_sprite(dir, spr_player_walk_side, spr_player_walk_front, spr_player_walk_back);
+    walk_cycle = 0;
+    update_player_art(true);
 	image_index = 0;
 }	
 
 estado_walk.roda = function()
 {
-    // Calcula primeiro a velocidade usando as teclas pressionadas
     velv = (down - up) * vel;
     velh = (right - left) * vel;
 
-    // Se nenhuma direção estiver pressionada, volta para idle
     if (velh == 0 && velv == 0)
     {
         troca_estado(estado_idle);
         exit;
     }
 
-    // Impede que o personagem ande mais rápido na diagonal
     var _tamanho = point_distance(0, 0, velh, velv);
 
     velh = (velh / _tamanho) * vel;
     velv = (velv / _tamanho) * vel;
 
-    // Define a direção somente depois de calcular a velocidade
     dir = point_direction(0, 0, velh, velv) div 90;
 
-    // Espelha o sprite lateral ao andar para a esquerda
-    if (velh != 0)
-    {
-        facing_sign = sign(velh);
-    }
-
-    sprite_index = define_sprite(
-        dir,
-        spr_player_walk_side,
-        spr_player_walk_front,
-        spr_player_walk_back
-    );
+    update_player_art(true);
 }
 
 
@@ -80,7 +82,6 @@ right = noone;
 
 velh = 0;
 velv = 0;
-vel = (room == rm_cavernas || room == rm_cavernas_2) ? 2 : 3;
 vel = 2;
 
 dir = 3;
@@ -88,7 +89,4 @@ dir = 3;
 inicia_estado(estado_idle);
 
 movimento_liberado = true;
-
-// Controle das marcas de passos nos mapas das cavernas.
-footstep_timer = 0;
-footstep_side = -1;
+som_garantir();
