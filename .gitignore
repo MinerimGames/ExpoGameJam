@@ -62,6 +62,33 @@ Temporary Items
 # GMRT build directory
 Build
 
+# Local secrets and authentication configuration
+.env
+.env.*
+!.env.example
+!.env.sample
+!.env.template
+.npmrc
+.pypirc
+.netrc
+.git-credentials
+.aws/
+.ssh/
+.codex/
+credentials.json
+credentials.local.*
+secrets.json
+secrets.local.*
+service-account*.json
+*.pem
+*.key
+*.p12
+*.pfx
+*.keystore
+*.jks
+id_rsa
+id_ed25519
+
 # Local exports, caches and diagnostic captures
 /dist/
 __pycache__/
